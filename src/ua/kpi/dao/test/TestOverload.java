@@ -9,9 +9,19 @@ import ua.kpi.model.entities.Student;
 public class TestOverload {
     public static void main(String[] args) {
 
-        FacultativeService facultativeService = FacultativeService.getInstance();
-        Student student = (Student) facultativeService.logIn("lobanov", "lobanov");
-        System.out.println(facultativeService.isStudentInCourse(student, 1));
+//        FacultativeService facultativeService = FacultativeService.getInstance();
+//        Student student = (Student) facultativeService.logIn("lobanov", "lobanov");
+//        System.out.println(facultativeService.isStudentInCourse(student, 1));
+
+        System.out.println(FacultativeService.getHashMD5("lobanov"));
+        System.out.println(FacultativeService.getHashMD5("petr123"));
+        System.out.println(FacultativeService.getHashMD5("vanya"));
+        System.out.println(FacultativeService.getHashMD5("nikpass"));
+        System.out.println(FacultativeService.getHashMD5("makarov"));
+        System.out.println(FacultativeService.getHashMD5("guru"));
+        System.out.println(FacultativeService.getHashMD5("marks"));
+        System.out.println(FacultativeService.getHashMD5("fain"));
+
         /*
         Go go = new Go();
         Stud st = new Stud();

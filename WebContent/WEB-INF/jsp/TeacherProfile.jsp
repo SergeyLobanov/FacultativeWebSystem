@@ -10,7 +10,11 @@
 <body>
 
 		<table border="1" align="center">
-		<caption>Your course: ${studentList.get(0).getCourse().getCourseName()}</caption>
+		<caption>
+		Your course: ${studentList.get(0).getCourse().getCourseName()}<br>
+		start ${studentList.get(0).getCourse().getStartDate()}
+		, end ${studentList.get(0).getCourse().getEndDate()}		
+		</caption>
 		<c:set var="course" value="${studentList.get(1).getCourse()}" scope="session"/>
 		  <tr>
 		    <td>Student</td>
