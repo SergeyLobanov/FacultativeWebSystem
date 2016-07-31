@@ -1,6 +1,8 @@
 package ua.kpi.model.entities;
 
 /**
+ * The CourseMember class implements facultative course member.
+ *
  * Created by Сергей on 29.07.2016.
  */
 public class CourseMember {
@@ -12,14 +14,11 @@ public class CourseMember {
     /**
      * course
      */
-    //todo: no id
     private Course course;
-    //private int courseID;
     /**
      * student
      */
     private Student student;
-    //private int studentID;
     /**
      * teachers mark of student activity on this course
      */
@@ -38,12 +37,6 @@ public class CourseMember {
         this.student = student;
         this.mark = mark;
         this.comment = comment;
-    }
-
-    public CourseMember(int courseMemberID, Course course, Student student) {
-        this.courseMemberID = courseMemberID;
-        this.course = course;
-        this.student = student;
     }
 
     public int getCourseMemberID() {
@@ -70,23 +63,6 @@ public class CourseMember {
         this.student = student;
     }
 
-    /*
-        public int getCourseID() {
-            return courseID;
-        }
-
-        public void setCourseID(int courseID) {
-            this.courseID = courseID;
-        }
-
-        public int getStudentID() {
-            return studentID;
-        }
-
-        public void setStudentID(int studentID) {
-            this.studentID = studentID;
-        }
-    */
     public int getMark() {
         return mark;
     }

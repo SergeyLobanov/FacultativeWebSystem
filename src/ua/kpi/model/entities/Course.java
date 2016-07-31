@@ -3,6 +3,9 @@ package ua.kpi.model.entities;
 import java.util.Date;
 
 /**
+ * The Course class implements facultative course.
+ * Course consists id, name, course teacher and dates of start and end
+ *
  * Created by Сергей on 27.07.2016.
  */
 public class Course {
@@ -19,9 +22,6 @@ public class Course {
      * course teacher
      */
     private Teacher courseTeacher;
-//    private int courseTeacherID;
-//    //todo:
-//    private String teacherName;
     /**
      * data of course start
      */
@@ -82,20 +82,12 @@ public class Course {
         this.endDate = endDate;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Course info: " +
-//                " name  " + courseName +
-//                ", teacher " + courseTeacherID +
-//                ", starts at " + startDate +
-//                ", ends at " + endDate;
-//    }
-@Override
-public String toString() {
-    return "Course info: " +
-            " course  " + courseName +
-            ", teacher " + courseTeacher.getName() +
-            ", starts at " + startDate +
-            ", ends at " + endDate;
-}
+    @Override
+    public String toString() {
+        return "Course info: " +
+                " course  " + courseName +
+                ", teacher " + courseTeacher.getName() +
+                ", starts at " + startDate +
+                ", ends at " + endDate;
+    }
 }

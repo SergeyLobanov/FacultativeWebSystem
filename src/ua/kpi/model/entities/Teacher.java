@@ -1,6 +1,8 @@
 package ua.kpi.model.entities;
 
 /**
+ * The Teacher class extends User abstract class and have TEACHER status of user
+ *
  * Created by Сергей on 27.07.2016.
  */
 public class Teacher extends User{

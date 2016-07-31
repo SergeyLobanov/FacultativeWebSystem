@@ -1,5 +1,8 @@
 package ua.kpi.dao.jdbc;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import ua.kpi.dao.CourseDao;
 import ua.kpi.model.entities.Course;
 import ua.kpi.model.entities.Teacher;
@@ -17,7 +20,7 @@ import java.util.List;
 public class JdbcCourseDao implements CourseDao {
     @Override
     public void create(Course course) {
-
+        throw new NotImplementedException();
     }
 
     @Override
@@ -37,10 +40,10 @@ public class JdbcCourseDao implements CourseDao {
 
     @Override
     public List<Course> findAll() {
+        List<Course> res = new ArrayList<>();
         try (Connection connection = JdbcDaoFactory.getConnection()) {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery(MysqlQuery.FIND_ALL_COURSES);
-            List<Course> res = new ArrayList<>();
             while (rs.next()) {
                 Teacher teacher = new Teacher(
                                         rs.getInt("id_teacher"),
@@ -55,37 +58,11 @@ public class JdbcCourseDao implements CourseDao {
                                 rs.getDate("end_date")));
             }
             stmt.close();
-            return res;
         } catch (SQLException e) {
-            e.printStackTrace();
-            throw new RuntimeException(e);
+            Logger logger =  LogManager.getLogger(JdbcCourseDao.class);
+            logger.error("Finding all courses error" + e );
         }
+        return res;
     }
 
-    @Override
-    public List<Course> findAllWithStudent(int id) {
-        try (Connection connection = JdbcDaoFactory.getConnection()) {
-            Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(MysqlQuery.FIND_ALL_COURSES);
-            List<Course> res = new ArrayList<>();
-            /*while (rs.next()) {
-                res.add(new Course(rs.getString("course"),
-                        rs.getString("name"),
-                        rs.getDate("start_date"),
-                        rs.getDate("end_date")));
-                /*
-                new Course(rs.getInt(1),
-                                rs.getString("course"),
-                                rs.getInt("id_teacher"),
-                                rs.getDate("start_date"),
-                                rs.getDate("end_date"))
-                 */
-            //}
-            stmt.close();
-            return res;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
-    }
 }

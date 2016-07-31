@@ -13,6 +13,8 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by Сергей on 27.07.2016.
@@ -46,7 +48,8 @@ public class JdbcDaoFactory extends DaoFactory {
             InitialContext ic = new InitialContext();
             ds = (DataSource) ic.lookup("java:comp/env/jdbc/FacultativeDB");
         } catch (NamingException e) {
-            e.printStackTrace();
+            Logger logger =  LogManager.getLogger(JdbcDaoFactory.class);
+            logger.error("Dao Factory creating error: " + e );
         }
     	//todo: delete
     	/*

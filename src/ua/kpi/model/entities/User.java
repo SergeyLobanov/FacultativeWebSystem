@@ -1,6 +1,8 @@
 package ua.kpi.model.entities;
 
 /**
+ * The User abstract class implements general user of service
+ *
  * Created by Сергей on 27.07.2016.
  */
 public abstract class User {
@@ -79,16 +81,5 @@ public abstract class User {
 
     public enum Status {
         TEACHER, STUDENT
-        /*
-
-        TEACHER("TEACHER"),
-        STUDENT("STUDENT");
-
-        private String status;
-
-        private Status(String status) {
-            this.status = status;
-        }
-         */
     }
 }

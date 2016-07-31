@@ -12,7 +12,7 @@ public class TestOverload {
 //        FacultativeService facultativeService = FacultativeService.getInstance();
 //        Student student = (Student) facultativeService.logIn("lobanov", "lobanov");
 //        System.out.println(facultativeService.isStudentInCourse(student, 1));
-
+/*
         System.out.println(FacultativeService.getHashMD5("lobanov"));
         System.out.println(FacultativeService.getHashMD5("petr123"));
         System.out.println(FacultativeService.getHashMD5("vanya"));
@@ -21,7 +21,7 @@ public class TestOverload {
         System.out.println(FacultativeService.getHashMD5("guru"));
         System.out.println(FacultativeService.getHashMD5("marks"));
         System.out.println(FacultativeService.getHashMD5("fain"));
-
+*/
         /*
         Go go = new Go();
         Stud st = new Stud();
