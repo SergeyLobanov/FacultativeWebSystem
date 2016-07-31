@@ -22,8 +22,6 @@ public class LogInCommand implements Command {
             request.setAttribute("message", "Wrong login or password");
             return "index.jsp";
         }
-        //request.removeAttribute("message");
-        //todo: remove message from jsp
         User user = facultativeService.logIn(login, password);
         request.getSession().setAttribute("user", user);
         request.getSession().setAttribute("status", user.getStatus().toString());

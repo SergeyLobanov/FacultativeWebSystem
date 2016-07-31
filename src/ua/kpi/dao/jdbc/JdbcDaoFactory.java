@@ -17,6 +17,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
+ * Extends DaoFactory class.
+ * Creates connection via DataSource and JdbcDaos
+ *
  * Created by Сергей on 27.07.2016.
  */
 public class JdbcDaoFactory extends DaoFactory {
@@ -26,7 +29,40 @@ public class JdbcDaoFactory extends DaoFactory {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
 */
+    /**
+     * data source for connection to database
+     */
     private static DataSource ds;
+
+    public JdbcDaoFactory() {
+    	try {
+            InitialContext ic = new InitialContext();
+            ds = (DataSource) ic.lookup("java:comp/env/jdbc/FacultativeDB");
+        } catch (NamingException e) {
+            Logger logger =  LogManager.getLogger(JdbcDaoFactory.class);
+            logger.error("Dao Factory creating error: " + e );
+        }
+    	/*
+    	try {
+    	    Class.forName("com.mysql.jdbc.Driver");
+    	    //System.out.println("ok");
+    	
+    	} catch (ClassNotFoundException e) {
+    	    e.printStackTrace();
+    	}
+    	*/
+    }
+
+
+    /**
+     * gets connection to database
+     * @return connection
+     * @throws SQLException
+     */
+    public static Connection getConnection() throws SQLException {
+        return ds.getConnection();
+        //return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+    }
 
     @Override
     public UserDao createUserDao() {
@@ -41,33 +77,5 @@ public class JdbcDaoFactory extends DaoFactory {
     @Override
     public CourseMemberDao createCourseMemberDao() {
         return new JdbcCourseMemberDao();
-    }
-
-    public JdbcDaoFactory() {
-    	try {
-            InitialContext ic = new InitialContext();
-            ds = (DataSource) ic.lookup("java:comp/env/jdbc/FacultativeDB");
-        } catch (NamingException e) {
-            Logger logger =  LogManager.getLogger(JdbcDaoFactory.class);
-            logger.error("Dao Factory creating error: " + e );
-        }
-    	//todo: delete
-    	/*
-    	try {
-    	    Class.forName("com.mysql.jdbc.Driver");
-    	    //System.out.println("ok");
-    	
-    	} catch (ClassNotFoundException e) {
-            //todo: make norm
-    	    System.out.println("Where is your MySQL JDBC Driver?");
-    	    e.printStackTrace();
-    	}
-    	*/
-    }
-    
-
-    public static Connection getConnection() throws SQLException {
-        return ds.getConnection();
-        //return DriverManager.getConnection(URL, USERNAME, PASSWORD);
     }
 }

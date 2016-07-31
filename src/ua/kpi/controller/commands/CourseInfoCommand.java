@@ -16,7 +16,7 @@ public class CourseInfoCommand implements Command {
         int courseId = Integer.valueOf(request.getParameter("courseId"));
     	//request.getSession().setAttribute("index", Integer.valueOf(request.getParameter("index")));
     	request.getSession().setAttribute("courseId", courseId);
-    	request.getSession().setAttribute("course", request.getParameter("course"));//todo:just a string
+    	request.getSession().setAttribute("course", request.getParameter("course"));
     	return "./WEB-INF/jsp/CourseInfo.jsp";
     }
 }
