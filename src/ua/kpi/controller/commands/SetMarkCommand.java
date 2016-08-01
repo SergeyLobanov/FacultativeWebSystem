@@ -2,6 +2,9 @@ package ua.kpi.controller.commands;
 
 import ua.kpi.model.FacultativeService;
 import ua.kpi.model.entities.CourseMember;
+import ua.kpi.view.AttributeConstant;
+import ua.kpi.view.LinkConstant;
+import ua.kpi.view.MessageConstant;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * Command sets mark and comment for student of course by teacher 
  * Created by Сергей on 30.07.2016.
  */
 public class SetMarkCommand implements Command {
@@ -16,16 +20,16 @@ public class SetMarkCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	int mark = Integer.parseInt(request.getParameter("mark"));
-    	String comment = request.getParameter("comment");
-    	CourseMember courseMember = (CourseMember)request.getSession().getAttribute("courseMember");
+    	int mark = Integer.parseInt(request.getParameter(AttributeConstant.MARK));
+    	String comment = request.getParameter(AttributeConstant.COMMENT);
+    	CourseMember courseMember = (CourseMember)request.getSession().getAttribute(AttributeConstant.COURSE_MEMBER);
     	courseMember.setMark(mark);
     	courseMember.setComment(comment);
     	if (facultativeService.updateMarkAndComment(courseMember)) {
-            request.setAttribute("message", "Mark and comment are updated succcesfully!");    		
+            request.setAttribute(AttributeConstant.MESSAGE, MessageConstant.MARK_UPDATED_SUCCESFULLY);
     	} else {
-            request.setAttribute("message", "Info is not updated!");    		
+            request.setAttribute(AttributeConstant.MESSAGE, MessageConstant.INFO_NOT_UPDATED);
     	}
-        return "./WEB-INF/jsp/EstimateStudent.jsp";
+        return LinkConstant.ESTIMATE_STUDENT;
     }
 }

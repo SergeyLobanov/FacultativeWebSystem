@@ -1,6 +1,8 @@
 package ua.kpi.controller.commands;
 
 import ua.kpi.model.FacultativeService;
+import ua.kpi.view.AttributeConstant;
+import ua.kpi.view.LinkConstant;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +11,8 @@ import java.io.IOException;
 import java.util.List;
 
 /**
+ * Command get list of all facultative courses 
+ * 
  * Created by Сергей on 28.07.2016.
  */
 public class CourseListCommand implements Command {
@@ -17,7 +21,7 @@ public class CourseListCommand implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List courseList = facultativeService.allCourses();
-        request.setAttribute("courseList", courseList);
-        return "./WEB-INF/jsp/AllCourses.jsp";
+        request.setAttribute(AttributeConstant.COURSE_LIST, courseList);
+        return LinkConstant.ALL_COURSES;
     }
 }

@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * The command interface
+ * 
  * Created by Сергей on 27.07.2016.
  */
 public interface Command {

@@ -1,6 +1,8 @@
 package ua.kpi.controller.commands;
 
 /**
+ * Enumeration of commands with corresponding actions
+ * 
  * Created by Сергей on 28.07.2016.
  */
 public enum CommandList {

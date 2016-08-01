@@ -2,6 +2,7 @@ package ua.kpi.controller;
 
 import ua.kpi.controller.commands.Command;
 import ua.kpi.controller.commands.CommandList;
+import ua.kpi.view.AttributeConstant;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * Main controller that executes received command
+ * 
  * Servlet implementation class Controller
  */
 @WebServlet("/Controller")
@@ -28,7 +31,7 @@ public class Controller extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String commandName = request.getParameter("command");
+		String commandName = request.getParameter(AttributeConstant.COMMAND);
 		System.out.println(commandName);
 		Command command = CommandList.valueOf(commandName).getCommand();
 		String goTo = command.execute(request, response);

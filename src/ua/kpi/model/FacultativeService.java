@@ -42,7 +42,7 @@ public class FacultativeService {
         DaoFactory factory = DaoFactory.getFactory();
         UserDao userDao = factory.createUserDao();
         String hashPass = getHashMD5(password);
-        return (userDao.logIn(login, hashPass) == null);
+        return (userDao.logIn(login, hashPass) != null);
     }
 
     /**
