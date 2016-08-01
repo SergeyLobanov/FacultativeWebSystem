@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="ex" uri="/WEB-INF/userInfo.tld"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -10,9 +11,7 @@
 <body>
 	
 	<form method="POST" action="Controller">	
-	
-		<c:out value="${user.getName()}"/> user <br>
-		<c:out value="${status}"/> status<br> 	
+		<ex:userInfo user="${user}"/><br>
 		<c:out value="${courseMember}"/> course<br>
 		
 		Mark <input type="number" min="0" max="5" name="mark" value="${courseMember.getMark()}"><br>
