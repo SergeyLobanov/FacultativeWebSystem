@@ -1,6 +1,6 @@
 package ua.kpi.controller.commands;
 
-import ua.kpi.model.FacultativeService;
+import ua.kpi.model.CourseMemberService;
 import ua.kpi.model.entities.CourseMember;
 import ua.kpi.view.AttributeConstant;
 import ua.kpi.view.LinkConstant;
@@ -16,12 +16,12 @@ import java.io.IOException;
  * Created by Сергей on 30.07.2016.
  */
 public class EstimateCommand implements Command {
-    FacultativeService facultativeService = FacultativeService.getInstance();
+    CourseMemberService courseMemberService = CourseMemberService.getInstance();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	int index = Integer.parseInt(request.getParameter(AttributeConstant.INDEX));
-    	CourseMember courseMember = facultativeService.getCourseMemberById(index);
+    	CourseMember courseMember = courseMemberService.getCourseMemberById(index);
     	request.setAttribute(AttributeConstant.COURSE_MEMBER, courseMember);
         return LinkConstant.ESTIMATE_STUDENT;
     }

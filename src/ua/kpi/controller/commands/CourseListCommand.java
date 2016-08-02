@@ -1,6 +1,6 @@
 package ua.kpi.controller.commands;
 
-import ua.kpi.model.FacultativeService;
+import ua.kpi.model.CourseService;
 import ua.kpi.model.entities.Course;
 import ua.kpi.view.AttributeConstant;
 import ua.kpi.view.LinkConstant;
@@ -21,11 +21,11 @@ import java.util.List;
  * Created by Сергей on 28.07.2016.
  */
 public class CourseListCommand implements Command {
-    FacultativeService facultativeService = FacultativeService.getInstance();
+    CourseService courseService = CourseService.getInstance();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Course> courseList = facultativeService.allCourses();
+        List<Course> courseList = courseService.allCourses();
         Logger logger =  LogManager.getLogger(CourseListCommand.class);
         logger.error("testing ERROR level");
         logger.trace("exiting application");

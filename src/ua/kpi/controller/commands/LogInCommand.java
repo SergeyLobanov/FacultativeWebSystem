@@ -2,7 +2,7 @@ package ua.kpi.controller.commands;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ua.kpi.model.FacultativeService;
+import ua.kpi.model.UserService;
 import ua.kpi.model.entities.User;
 import ua.kpi.view.AttributeConstant;
 import ua.kpi.view.LinkConstant;
@@ -20,7 +20,8 @@ import java.io.IOException;
  * Created by Сергей on 28.07.2016.
  */
 public class LogInCommand implements Command {
-    FacultativeService facultativeService = FacultativeService.getInstance();
+
+    UserService userService = UserService.getInstance();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,11 +32,11 @@ public class LogInCommand implements Command {
         logger.error("testing ERROR level");
         logger.trace("exiting application");
         
-        if (!facultativeService.isUserExist(login, password)) {
+        if (!userService.isUserExist(login, password)) {
             request.setAttribute(AttributeConstant.MESSAGE, MessageConstant.WRONG_LOGIN_OR_PASSWORD);
             return LinkConstant.INDEX;
         }
-        User user = facultativeService.logIn(login, password);
+        User user = userService.logIn(login, password);
         request.getSession().setAttribute(AttributeConstant.USER, user);
         request.getSession().setAttribute(AttributeConstant.STATUS, user.getStatus().toString());
         return LinkConstant.MAIN;

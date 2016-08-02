@@ -1,6 +1,6 @@
 package ua.kpi.controller.commands;
 
-import ua.kpi.model.FacultativeService;
+import ua.kpi.model.CourseService;
 import ua.kpi.model.entities.Course;
 import ua.kpi.view.AttributeConstant;
 import ua.kpi.view.LinkConstant;
@@ -20,7 +20,7 @@ import java.io.IOException;
  * Created by Сергей on 29.07.2016.
  */
 public class CourseInfoCommand implements Command {
-    FacultativeService facultativeService = FacultativeService.getInstance();
+    CourseService courseService = CourseService.getInstance();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,9 +28,7 @@ public class CourseInfoCommand implements Command {
         logger.error("testing ERROR level");
         logger.trace("exiting application");
     	int courseId = Integer.valueOf(request.getParameter(AttributeConstant.COURSE_ID));
-    	Course course = facultativeService.getCourseById(courseId);
-    	//request.getSession().setAttribute("index", Integer.valueOf(request.getParameter("index")));
-    	//request.setAttribute(AttributeConstant.COURSE_ID, courseId);
+    	Course course = courseService.getCourseById(courseId);
     	request.setAttribute(AttributeConstant.COURSE, course);
     	return LinkConstant.COURSE_INFO;
     }

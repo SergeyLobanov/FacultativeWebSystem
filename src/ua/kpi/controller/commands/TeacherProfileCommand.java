@@ -1,6 +1,6 @@
 package ua.kpi.controller.commands;
 
-import ua.kpi.model.FacultativeService;
+import ua.kpi.model.CourseMemberService;
 import ua.kpi.model.entities.CourseMember;
 import ua.kpi.model.entities.Teacher;
 import ua.kpi.view.AttributeConstant;
@@ -22,7 +22,7 @@ import java.util.List;
  * Created by Сергей on 29.07.2016.
  */
 public class TeacherProfileCommand implements Command {
-    FacultativeService facultativeService = FacultativeService.getInstance();
+    CourseMemberService courseMemberService = CourseMemberService.getInstance();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -30,7 +30,7 @@ public class TeacherProfileCommand implements Command {
         logger.error("testing ERROR level");
         logger.trace("exiting application");
         Teacher teacher = (Teacher)request.getSession().getAttribute(AttributeConstant.USER);
-        List<CourseMember> studentList = facultativeService.getTeacherStudents(teacher.getId());
+        List<CourseMember> studentList = courseMemberService.getTeacherStudents(teacher.getId());
         request.setAttribute(AttributeConstant.STUDENT_LIST, studentList);
         return LinkConstant.TEACHER_PROFILE;
     }
