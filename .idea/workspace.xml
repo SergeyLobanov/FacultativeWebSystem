@@ -2,21 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55db3489-8577-4f9f-93da-ff2bef85cc8b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/dao/test/Go.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/dao/test/JdbcTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/dao/test/Stud.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/dao/test/Teach.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/dao/test/Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/dao/test/TestOverload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/dao/test/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ua/kpi/dao/test/JdbcTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ua/kpi/dao/test/Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ua/kpi/dao/test/TestOverload.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/log4j2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/log4j2.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/controller/Controller.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/controller/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/CourseInfoCommand.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/CourseInfoCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/CourseListCommand.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/CourseListCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/EstimateCommand.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/EstimateCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/LogInCommand.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/LogInCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/SetMarkCommand.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/SetMarkCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/StudentProfileCommand.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/StudentProfileCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/TeacherProfileCommand.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/controller/commands/TeacherProfileCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/dao/jdbc/JdbcCourseDao.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/dao/jdbc/JdbcCourseDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/dao/jdbc/JdbcCourseMemberDao.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/dao/jdbc/JdbcCourseMemberDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/dao/jdbc/MysqlQuery.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/dao/jdbc/MysqlQuery.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/ua/kpi/model/FacultativeService.class" afterPath="$PROJECT_DIR$/build/classes/ua/kpi/model/FacultativeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/AllCourses.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/AllCourses.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/CourseInfo.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/CourseInfo.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/EstimateStudent.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/EstimateStudent.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/StudentProfile.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/StudentProfile.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/main.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/TeacherProfile.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/TeacherProfile.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/controller/Controller.java" afterPath="$PROJECT_DIR$/src/ua/kpi/controller/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseInfoCommand.java" afterPath="$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseInfoCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseListCommand.java" afterPath="$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseListCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/controller/commands/EstimateCommand.java" afterPath="$PROJECT_DIR$/src/ua/kpi/controller/commands/EstimateCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/controller/commands/JoinCourseCommand.java" afterPath="$PROJECT_DIR$/src/ua/kpi/controller/commands/JoinCourseCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/controller/commands/LogInCommand.java" afterPath="$PROJECT_DIR$/src/ua/kpi/controller/commands/LogInCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/controller/commands/SetMarkCommand.java" afterPath="$PROJECT_DIR$/src/ua/kpi/controller/commands/SetMarkCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/controller/commands/StudentProfileCommand.java" afterPath="$PROJECT_DIR$/src/ua/kpi/controller/commands/StudentProfileCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/controller/commands/TeacherProfileCommand.java" afterPath="$PROJECT_DIR$/src/ua/kpi/controller/commands/TeacherProfileCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseDao.java" afterPath="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseMemberDao.java" afterPath="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseMemberDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/MysqlQuery.java" afterPath="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/MysqlQuery.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/kpi/model/FacultativeService.java" afterPath="$PROJECT_DIR$/src/ua/kpi/model/FacultativeService.java" />
     </list>
     <ignored path="FacultativeWebSystem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,31 +76,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/Controller.java">
+      <file leaf-file-name="FacultativeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/FacultativeService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthorizationFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ua/kpi/filter/AuthorizationFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="91" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EncodingFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ua/kpi/filter/EncodingFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <caret line="141" column="21" selection-start-line="141" selection-start-column="21" selection-end-line="141" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,33 +88,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInfoTag.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ua/kpi/tag/UserInfoTag.java">
+      <file leaf-file-name="Course.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/entities/Course.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JdbcCourseDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61130136">
-              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.66952056">
+              <caret line="60" column="35" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MysqlQuery.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/MysqlQuery.java">
+      <file leaf-file-name="JoinCourseCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/commands/JoinCourseCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseInfoCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseInfoCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -124,37 +122,27 @@
         <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseMemberDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="78" selection-end-column="86" />
+              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/entities/User.java">
+      <file leaf-file-name="MysqlQuery.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/MysqlQuery.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AttributeConstant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ua/kpi/view/AttributeConstant.java">
+      <file leaf-file-name="JdbcCourseDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageConstant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ua/kpi/view/MessageConstant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -182,7 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/Command.java" />
         <option value="$PROJECT_DIR$/data.properties" />
         <option value="$PROJECT_DIR$/WebContent/META-INF/context.xml" />
         <option value="$PROJECT_DIR$/WebContent/test.jsp" />
@@ -196,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/LogIn.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseInfo.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/CommandList.java" />
-        <option value="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/MysqlQuery.java" />
         <option value="$PROJECT_DIR$/src/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/ua/kpi/dao/test/TestOverload.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/model/entities/Course.java" />
@@ -209,22 +195,15 @@
         <option value="$PROJECT_DIR$/src/ua/kpi/dao/CourseDao.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/dao/CourseMemberDao.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcDaoFactory.java" />
-        <option value="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseMemberDao.java" />
-        <option value="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseDao.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcUserDao.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/ua/kpi/model/FacultativeService.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/ua/kpi/filter/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/view/LinkConstant.java" />
-        <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseInfoCommand.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseListCommand.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/EstimateCommand.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/StudentProfileCommand.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/TeacherProfileCommand.java" />
-        <option value="$PROJECT_DIR$/src/ua/kpi/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/JoinCourseCommand.java" />
-        <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/LogInCommand.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/SetMarkCommand.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/view/MessageConstant.java" />
         <option value="$PROJECT_DIR$/src/ua/kpi/filter/AuthorizationFilter.java" />
@@ -233,6 +212,15 @@
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/userInfo.tag" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/CourseInfo.jsp" />
         <option value="$PROJECT_DIR$/src/ua/kpi/tag/UserInfoTag.java" />
+        <option value="$PROJECT_DIR$/src/ua/kpi/dao/test/JdbcTest.java" />
+        <option value="$PROJECT_DIR$/src/ua/kpi/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/LogInCommand.java" />
+        <option value="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseMemberDao.java" />
+        <option value="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/MysqlQuery.java" />
+        <option value="$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseDao.java" />
+        <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseInfoCommand.java" />
+        <option value="$PROJECT_DIR$/src/ua/kpi/model/FacultativeService.java" />
+        <option value="$PROJECT_DIR$/src/ua/kpi/controller/commands/JoinCourseCommand.java" />
       </list>
     </option>
   </component>
@@ -304,9 +292,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -392,20 +377,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FacultativeWebSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FacultativeWebSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="kpi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -454,6 +425,54 @@
               <option name="myItemId" value="kpi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FacultativeWebSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FacultativeWebSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FacultativeWebSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FacultativeWebSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -474,6 +493,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FacultativeWebSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FacultativeWebSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -503,8 +548,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FacultativeWebSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FacultativeWebSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FacultativeWebSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FacultativeWebSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -518,20 +614,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ua.kpi.controller.commands" />
-      <recent name="ua.kpi.dao.jdbc" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java\eclipse\workspace\FacultativeWebSystem\src\ua\kpi\dao" />
+      <recent name="D:\java\eclipse\workspace\FacultativeWebSystem\src\ua\kpi\resources" />
+      <recent name="D:\java\eclipse\workspace\FacultativeWebSystem\lib" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\eclipse\workspace\FacultativeWebSystem\src\ua\kpi\dao" />
       <recent name="D:\java\eclipse\workspace\FacultativeWebSystem\lib" />
       <recent name="D:\java\eclipse\workspace\FacultativeWebSystem" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ua.kpi.filter" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\java\eclipse\workspace\FacultativeWebSystem\src\ua\kpi\resources" />
-      <recent name="D:\java\eclipse\workspace\FacultativeWebSystem\lib" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ua.kpi.controller.commands" />
+      <recent name="ua.kpi.dao.jdbc" />
     </key>
   </component>
   <component name="RunManager" selected="Application.TestOverload">
@@ -1125,12 +1223,13 @@
       <workItem from="1469868169360" duration="12212000" />
       <workItem from="1469954148505" duration="12464000" />
       <workItem from="1470043031886" duration="8163000" />
-      <workItem from="1470058464057" duration="2843000" />
+      <workItem from="1470058464057" duration="5958000" />
+      <workItem from="1470122274014" duration="5055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90089000" />
+    <option name="totallyTimeSpent" value="98259000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1205,21 +1304,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/entities/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1249,13 +1333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1325,38 +1402,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/DaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34299517">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcDaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5458937">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/entities/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/entities/CourseMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.123188406">
-          <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -1383,16 +1432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/FacultativeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21326165">
@@ -1412,13 +1451,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseInfoCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="113" selection-start-line="23" selection-start-column="113" selection-end-line="23" selection-end-column="113" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,20 +1466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/commands/JoinCourseCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="100" selection-start-line="26" selection-start-column="100" selection-end-line="26" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/commands/LogInCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="99" selection-start-line="27" selection-start-column="99" selection-end-line="27" selection-end-column="99" />
         </state>
       </provider>
     </entry>
@@ -1475,14 +1494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/kpi/view/MessageConstant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1495,7 +1506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="91" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,22 +1533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseMemberDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="78" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/TeacherProfile.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3046595">
@@ -1559,34 +1553,149 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/kpi/tag/UserInfoTag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/test/TestOverload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <marker date="1469777601460" expanded="true" signature="1640:1662" placeholder="select * fro... students" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/test/JdbcTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/DaoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcDaoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7962329">
+          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/entities/CourseMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34931508">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4760274">
+          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/commands/LogInCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29109588">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/MysqlQuery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseMemberDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/kpi/dao/jdbc/JdbcCourseDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61130136">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/commands/CourseInfoCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/FacultativeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="141" column="21" selection-start-line="141" selection-start-column="21" selection-end-line="141" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/controller/commands/JoinCourseCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/kpi/model/entities/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66952056">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="35" />
           <folding />
         </state>
       </provider>

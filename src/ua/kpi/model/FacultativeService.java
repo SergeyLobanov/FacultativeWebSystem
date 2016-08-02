@@ -126,6 +126,28 @@ public class FacultativeService {
     }
 
     /**
+     * get CourseMember by id
+     * @param courseMemberId id of course member
+     * @return course member
+     */
+    public CourseMember getCourseMemberById(int courseMemberId) {
+        DaoFactory factory = DaoFactory.getFactory();
+        CourseMemberDao courseMemberDao = factory.createCourseMemberDao();
+        return courseMemberDao.find(courseMemberId);
+    }
+
+    /**
+     * get course by id
+     * @param courseId id of course
+     * @return course
+     */
+    public Course getCourseById(int courseId) {
+        DaoFactory factory = DaoFactory.getFactory();
+        CourseDao courseDao = factory.createCourseDao();
+        return courseDao.find(courseId);
+    }
+
+    /**
      * function implements MD5 algorithm for string hashing
      * @param st string for hashing
      * @return hash value of string
@@ -143,29 +165,6 @@ public class FacultativeService {
             e.printStackTrace();
         }
         return null;
-        //todo: delete
-//        MessageDigest messageDigest = null;
-//        byte[] digest = new byte[0];
-//
-//        try {
-//            messageDigest = MessageDigest.getInstance("MD5");
-//            messageDigest.reset();
-//            messageDigest.update(st.getBytes());
-//            digest = messageDigest.digest();
-//        } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
-//        }
-//
-//        BigInteger bigInt = new BigInteger(1, digest);
-//        StringBuffer md5Hex = new StringBuffer(bigInt.toString(16));
-//        //String md5Hex = bigInt.toString(16);
-//
-//        while( md5Hex.length() < 32 ){
-//            md5Hex.append("0")
-//            md5Hex = "0" + md5Hex;
-//        }
-//
-//        return md5Hex;
     }
 
 }

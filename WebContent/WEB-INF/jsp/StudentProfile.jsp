@@ -20,7 +20,7 @@
 		    <td>Mark</td>
 		    <td>Comment</td>
 		  </tr>			
-				<c:forEach var="course" items="${courseList}" varStatus="status">
+				<c:forEach var="course" items="${courseList}">
 				  <tr>
 				    	<td><c:out value="${course.getCourse().getCourseName()}"/></td>
 				    	<td><c:out value="${course.getCourse().getCourseTeacher().getName()}"/></td>
@@ -28,19 +28,6 @@
 				    	<td><c:out value="${course.getCourse().getEndDate()}"/></td>
 					    <td><c:out value="${course.getMark()}"/></td>
 					    <td><c:out value="${course.getComment()}"/></td>
-					<!--
-					    <td><c:out value="${a.getMark()}"/></td>
-					    <td><c:out value="${a.getComment()}"/></td>
-					    
-				    <td>
-					<INPUT type="hidden" name="command" value="COURSE_INFO"/>
-
-					<c:set var="course" value="${a}" scope="session"/>
-					<INPUT type="hidden" name="course" value="${a}"/>
-					
-					<input type="submit" name = "this" value="Course info">
-					</td>
-					-->
 				  </tr>		
 				</c:forEach>
 		</table>					

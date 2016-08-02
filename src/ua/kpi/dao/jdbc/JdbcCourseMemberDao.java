@@ -20,6 +20,45 @@ import java.util.List;
 public class JdbcCourseMemberDao implements CourseMemberDao {
 
     @Override
+    public CourseMember find(int courseMemberId) {
+        CourseMember courseMember = null;
+        try (Connection connection = JdbcDaoFactory.getConnection()){
+            PreparedStatement stmt = connection.prepareStatement(MysqlQuery.FIND_COURSE_MEMBER_BY_ID);
+            stmt.setInt(1, courseMemberId);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                Teacher teacher = new Teacher(
+                        rs.getInt("id_teacher"),
+                        rs.getString("t.name"),
+                        rs.getString("t.login"),
+                        rs.getString("t.password"));
+                Student student = new Student(
+                        rs.getInt("id_student"),
+                        rs.getString("s.name"),
+                        rs.getString("s.login"),
+                        rs.getString("s.password"));
+                Course course = new Course(
+                        rs.getInt("id_course"),
+                        rs.getString("course"),
+                        teacher,
+                        rs.getDate("start_date"),
+                        rs.getDate("end_date"));
+                courseMember = new CourseMember(
+                        rs.getInt(1),
+                        course,
+                        student,
+                        rs.getInt("mark"),
+                        rs.getString("comment"));
+            }
+            stmt.close();
+        } catch (SQLException e) {
+            Logger logger =  LogManager.getLogger(JdbcCourseMemberDao.class);
+            logger.error("Finding course member by student and course id error" + e );
+        }
+        return courseMember;
+    }
+
+    @Override
     public List<CourseMember> findByTeacherID(int id) {
         List<CourseMember> courseMembers = new ArrayList<>();
         try (Connection connection = JdbcDaoFactory.getConnection()){
@@ -48,6 +87,7 @@ public class JdbcCourseMemberDao implements CourseMemberDao {
 
     @Override
     public CourseMember find(Student student, int courseId) {
+        //todo: maybe don't need
         CourseMember courseMember = null;
         try (Connection connection = JdbcDaoFactory.getConnection()){
             PreparedStatement stmt = connection.prepareStatement(MysqlQuery.FIND_COURSE_MEMBER);
@@ -166,11 +206,6 @@ public class JdbcCourseMemberDao implements CourseMemberDao {
     @Override
     public boolean delete(int id) {
         return false;
-    }
-
-    @Override
-    public CourseMember find(int id) {
-        return null;
     }
 
     @Override

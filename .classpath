@@ -15,5 +15,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/apache-log4j-2.6.2-bin"/>
+	<classpathentry kind="lib" path="utils"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

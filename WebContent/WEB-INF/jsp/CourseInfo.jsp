@@ -13,18 +13,14 @@
 	<form method="POST" action="Controller">	
 		<ex:userInfo user="${user}"/><br>
 		<c:out value="${course}"/><br>
+		<c:out value="${course.getCourseTeacher()}"/><br>
 		<c:if test="${status eq 'STUDENT'}">
 			<INPUT type="hidden" name="command" value="JOIN_COURSE"/>
+			<input type="hidden" name="courseId" value="${course.getId()}"/>
 			<input type="submit" value="Join course">
 		</c:if>	
-		<br><c:out value="${message}"/><br>	
-				    	
+		<br><c:out value="${message}"/><br>					    	
 	</form>
-	<!-- 
-		<c:out value="${index}"/> index<br>	
-		<c:out value="${courseId}"/> courseId<br>	
-
-	 -->
 
 </body>
 </html>

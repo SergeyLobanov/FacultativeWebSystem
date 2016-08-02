@@ -17,7 +17,7 @@
 		    <td>Start</td>
 		    <td>End</td>
 		  </tr>		
-			<c:forEach var="course" items="${courseList}" varStatus="status">
+			<c:forEach var="course" items="${courseList}">
 				  <tr>
 				    <td><c:out value="${course.getCourseName()}"/> 
 				    <td><c:out value="${course.getCourseTeacher().getName()}"/></td>
@@ -27,30 +27,11 @@
 					<form method="POST" action="Controller">
 						<INPUT type="hidden" name="command" value="COURSE_INFO"/>
 						<input type="hidden" name="courseId" value="${course.getId()}">
-						<input type="hidden" name="course" value="${course}">
 						<input type="submit" value="Course info">
 					</form>		
 					</td>					
 				  </tr>					
 				</c:forEach>
-					<!--	
-						best thing for getting element from list by id
-						<input type="hidden" name="index" value="$   {status.  index}">
-					
-					<form method="POST" action="Controller">
-						<INPUT type="hidden" name="command" value="COURSE_INFO"/>
-						<c:set var="course" value="${a}"/>
-						<input type="submit" value="Course info">
-						<c:out value="${course}"/> 
-					</form>					
-					
-						<INPUT type="hidden" name="course" value="${a}"/>
-				<a href="./Controller?command=COURSE_INFO&course=${a}">Course info</a>
-		  <c:forEach var="a" items="${courseList}" varStatus="status">
-		  		<c:set var="course{status.count}" value="${a}" scope="session"/>
-		  		<c:out value="${status.count}"/>
-		  </c:forEach>
-					-->
 		</table>
 
 </body>

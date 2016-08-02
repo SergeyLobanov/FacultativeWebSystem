@@ -1,12 +1,17 @@
 package ua.kpi.controller.commands;
 
 import ua.kpi.model.FacultativeService;
+import ua.kpi.model.entities.Course;
 import ua.kpi.view.AttributeConstant;
 import ua.kpi.view.LinkConstant;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -20,7 +25,10 @@ public class CourseListCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List courseList = facultativeService.allCourses();
+        List<Course> courseList = facultativeService.allCourses();
+        Logger logger =  LogManager.getLogger(CourseListCommand.class);
+        logger.error("testing ERROR level");
+        logger.trace("exiting application");
         request.setAttribute(AttributeConstant.COURSE_LIST, courseList);
         return LinkConstant.ALL_COURSES;
     }

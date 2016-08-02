@@ -6,10 +6,7 @@ import ua.kpi.dao.CourseDao;
 import ua.kpi.model.entities.Course;
 import ua.kpi.model.entities.Teacher;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +45,33 @@ public class JdbcCourseDao implements CourseDao {
     }
 
     @Override
+    public Course find(int id) {
+        Course res = null;
+        try (Connection connection = JdbcDaoFactory.getConnection()) {
+            PreparedStatement stmt = connection.prepareStatement(MysqlQuery.FIND_COURSE_BY_ID);
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                Teacher teacher = new Teacher(
+                        rs.getInt("id_teacher"),
+                        rs.getString("name"),
+                        rs.getString("login"),
+                        rs.getString("password"));
+                res = new Course(rs.getInt(1),
+                                rs.getString("course"),
+                                teacher,
+                                rs.getDate("start_date"),
+                                rs.getDate("end_date"));
+            }
+            stmt.close();
+        } catch (SQLException e) {
+            Logger logger =  LogManager.getLogger(JdbcCourseDao.class);
+            logger.error("Finding all courses error" + e );
+        }
+        return res;
+    }
+
+    @Override
     public void create(Course course) {
         throw new UnsupportedOperationException();
     }
@@ -60,10 +84,5 @@ public class JdbcCourseDao implements CourseDao {
     @Override
     public boolean delete(int id) {
         return false;
-    }
-
-    @Override
-    public Course find(int id) {
-        return null;
     }
 }

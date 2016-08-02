@@ -1,6 +1,7 @@
 package ua.kpi.controller.commands;
 
 import ua.kpi.model.FacultativeService;
+import ua.kpi.model.entities.Course;
 import ua.kpi.model.entities.Student;
 import ua.kpi.view.AttributeConstant;
 import ua.kpi.view.LinkConstant;
@@ -22,7 +23,9 @@ public class JoinCourseCommand implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Student student = (Student) request.getSession().getAttribute(AttributeConstant.USER);
-        int courseId = (int) request.getSession().getAttribute(AttributeConstant.COURSE_ID);
+        int courseId = Integer.parseInt(request.getParameter(AttributeConstant.COURSE_ID));
+    	Course course = facultativeService.getCourseById(courseId);
+    	request.setAttribute(AttributeConstant.COURSE, course);
         if(facultativeService.isStudentInCourse(student, courseId)) {
             request.setAttribute(AttributeConstant.MESSAGE, MessageConstant.ALREADY_JOINED_IN_COURSE);
         } else {

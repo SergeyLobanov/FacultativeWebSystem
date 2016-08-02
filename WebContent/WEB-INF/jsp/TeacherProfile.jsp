@@ -15,13 +15,13 @@
 		start ${studentList.get(0).getCourse().getStartDate()}
 		, end ${studentList.get(0).getCourse().getEndDate()}		
 		</caption>
-		<c:set var="course" value="${studentList.get(1).getCourse()}" scope="session"/>
+		<c:set var="course" value="${studentList.get(0).getCourse()}"/>
 		  <tr>
 		    <td>Student</td>
 		    <td>Mark</td>
 		    <td>Comment</td>
 		  </tr>			
-				<c:forEach var="student" items="${studentList}" varStatus="status">
+				<c:forEach var="student" items="${studentList}">
 				  <tr>
 				    	<td><c:out value="${student.getStudent().getName()}"/></td>
 					    <td><c:out value="${student.getMark()}"/></td>
@@ -29,23 +29,10 @@
 						<td>
 							<form method="POST" action="Controller">
 								<INPUT type="hidden" name="command" value="ESTIMATE_STUDENT"/>
-								<INPUT type="hidden" name="index" value="${status.index}"/>
+								<INPUT type="hidden" name="index" value="${student.getCourseMemberID()}"/>
 								<input type="submit" value="Estimate student">		
 							</form>	
 						</td>	
-					<!--
-					    <td><c:out value="${a.getMark()}"/></td>
-					    <td><c:out value="${a.getComment()}"/></td>
-					    
-				    <td>
-					<INPUT type="hidden" name="command" value="COURSE_INFO"/>
-
-					<c:set var="course" value="${a}" scope="session"/>
-					<INPUT type="hidden" name="course" value="${a}"/>
-					
-					<input type="submit" name = "this" value="Course info">
-					</td>
-					-->
 				  </tr>		
 				</c:forEach>
 		</table>					

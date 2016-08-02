@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="ex" uri="/WEB-INF/userInfo.tld"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -17,16 +17,11 @@
 		Mark <input type="number" min="0" max="5" name="mark" value="${courseMember.getMark()}"><br>
 		Comment<input type="text" name="comment" value="${courseMember.getComment()}"><br>
 		<INPUT type="hidden" name="command" value="SET_MARK"/>
-		<input type="submit" name="command" value="Save">
+		<INPUT type="hidden" name="index" value="${courseMember.getCourseMemberID()}"/>
+		<input type="submit" value="Save">
 		
-		<br><c:out value="${message}"/><br>	
-				    	
+		<br><c:out value="${message}"/><br>					    	
 	</form>
-	<!-- 
-		<c:out value="${index}"/> index<br>	
-		<c:out value="${courseId}"/> courseId<br>	
-
-	 -->
 
 </body>
 </html>

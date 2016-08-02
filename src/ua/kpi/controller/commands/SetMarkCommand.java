@@ -22,9 +22,11 @@ public class SetMarkCommand implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	int mark = Integer.parseInt(request.getParameter(AttributeConstant.MARK));
     	String comment = request.getParameter(AttributeConstant.COMMENT);
-    	CourseMember courseMember = (CourseMember)request.getSession().getAttribute(AttributeConstant.COURSE_MEMBER);
+    	int index = Integer.parseInt(request.getParameter(AttributeConstant.INDEX));
+    	CourseMember courseMember = facultativeService.getCourseMemberById(index);
     	courseMember.setMark(mark);
     	courseMember.setComment(comment);
+		request.setAttribute(AttributeConstant.COURSE_MEMBER, courseMember);
     	if (facultativeService.updateMarkAndComment(courseMember)) {
             request.setAttribute(AttributeConstant.MESSAGE, MessageConstant.MARK_UPDATED_SUCCESFULLY);
     	} else {

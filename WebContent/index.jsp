@@ -8,6 +8,7 @@
 <title>Log in</title>
 </head>
 <body>
+
 	<form method="POST" action="Controller">
 		Login <input type="text" name="login"><br>
 		Password<input type="password" name="password"><br>

@@ -33,6 +33,15 @@ public interface MysqlQuery {
             "JOIN students s ON cm.id_student = s.id_student " +
             "JOIN teachers t ON t.id_teacher = c.id_teacher " +
             "WHERE (c.id_course = ?) AND (s.id_student = ?)";
+    String FIND_COURSE_MEMBER_BY_ID = "SELECT id_course_member, c.id_course, course," +
+            "t.id_teacher, t.name, t.login, t.password, " +
+            "start_date, end_date, s.id_student, s.name, " +
+            "s.login, s.password, mark, comment " +
+            "FROM course_members cm " +
+            "JOIN courses c ON cm.id_course = c.id_course " +
+            "JOIN students s ON cm.id_student = s.id_student " +
+            "JOIN teachers t ON t.id_teacher = c.id_teacher " +
+            "WHERE id_course_member = ?";
     String FIND_STUDENTS_OF_TEACHER_BY_ID = "SELECT id_course_member, " +
             "c.id_course, course, t.id_teacher, t.name, t.login, t.password," +
             "start_date, end_date, s.id_student, s.name, s.login, " +
@@ -42,4 +51,10 @@ public interface MysqlQuery {
             "JOIN students s ON cm.id_student = s.id_student " +
             "JOIN teachers t ON t.id_teacher = c.id_teacher " +
             "WHERE c.id_teacher = ?";
+    String FIND_COURSE_BY_ID = "SELECT c.id_course, course," +
+            "t.id_teacher, t.name, t.login, t.password, " +
+            "start_date, end_date " +
+            "FROM courses c " +
+            "JOIN teachers t ON t.id_teacher = c.id_teacher " +
+            "WHERE c.id_course = ?";
 }
