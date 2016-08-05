@@ -1,5 +1,7 @@
 package ua.kpi.dao.jdbc;
 
+import java.io.IOException;
+
 /**
  * Interface consists error messages for database
  *
@@ -17,4 +19,5 @@ public interface ErrorMessage {
     String CREATE_DAO_FACTORY = "Dao Factory creating error: ";
     String GET_DAO_FACTORY = "Dao Factory creating error: ";
     String USER_LOGIN = "User login error ";
+	String USER_TAG_ERROR = "UserInfo tag error ";
 }

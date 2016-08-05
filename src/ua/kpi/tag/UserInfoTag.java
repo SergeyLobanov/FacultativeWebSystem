@@ -2,6 +2,8 @@ package ua.kpi.tag;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import ua.kpi.dao.jdbc.ErrorMessage;
 import ua.kpi.model.entities.User;
 
 import javax.servlet.jsp.JspWriter;
@@ -34,7 +36,8 @@ public class UserInfoTag extends SimpleTagSupport {
             out.println(user.getStatus());
         } catch (IOException e) {
             Logger logger =  LogManager.getLogger(UserInfoTag.class);
-            logger.error("UserInfo tag error " + e );
+            logger.error(ErrorMessage.USER_TAG_ERROR + e );
+            throw new RuntimeException(e);
         }
     }
 }
