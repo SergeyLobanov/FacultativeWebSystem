@@ -10,9 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -26,10 +23,7 @@ public class TeacherProfileCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	Logger logger =  LogManager.getLogger(TeacherProfileCommand.class);
-        logger.error("testing ERROR level");
-        logger.trace("exiting application");
-        Teacher teacher = (Teacher)request.getSession().getAttribute(AttributeConstant.USER);
+    	Teacher teacher = (Teacher)request.getSession().getAttribute(AttributeConstant.USER);
         List<CourseMember> studentList = courseMemberService.getTeacherStudents(teacher.getId());
         request.setAttribute(AttributeConstant.STUDENT_LIST, studentList);
         return LinkConstant.TEACHER_PROFILE;

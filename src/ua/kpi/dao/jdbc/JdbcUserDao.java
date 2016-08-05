@@ -1,7 +1,6 @@
 package ua.kpi.dao.jdbc;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import ua.kpi.dao.UserDao;
 import ua.kpi.model.entities.Student;
 import ua.kpi.model.entities.Teacher;
@@ -9,6 +8,8 @@ import ua.kpi.model.entities.User;
 
 import java.sql.*;
 import java.util.List;
+
+import org.apache.log4j.Logger;
 
 /**
  * Implements UserDao interface
@@ -24,33 +25,33 @@ public class JdbcUserDao implements UserDao {
             PreparedStatement stmt = connection.prepareStatement(MysqlQuery.FIND_USER);
             stmt.setNString(1, login);
             stmt.setNString(2, password);
+
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                User.Status status = User.Status.valueOf(rs.getString("status"));
+                User.Status status = User.Status.valueOf(rs.getString(ColumnName.STATUS));
                 switch (status) {
                     case STUDENT:
                         user = new Student(rs.getInt(1),
-                                rs.getNString("name"),
-                                rs.getNString("login"),
-                                rs.getNString("password"));
+                                rs.getNString(ColumnName.NAME),
+                                rs.getNString(ColumnName.LOGIN),
+                                rs.getNString(ColumnName.PASSWORD));
                         break;
                     case TEACHER:
                         user = new Teacher(rs.getInt(1),
-                                rs.getNString("name"),
-                                rs.getNString("login"),
-                                rs.getNString("password"));
+                                rs.getNString(ColumnName.NAME),
+                                rs.getNString(ColumnName.LOGIN),
+                                rs.getNString(ColumnName.PASSWORD));
                         break;
                     default:
-                        Logger logger =  LogManager.getLogger(JdbcUserDao.class);
-                        logger.error("Wrong user status");
-                        return null;
+                        return user;
                 }
             } else {
                 return null;
             }
         } catch (SQLException e) {
-            Logger logger =  LogManager.getLogger(JdbcUserDao.class);
-            logger.error("User login error" + e );
+            Logger logger =  Logger.getLogger(JdbcUserDao.class);
+            logger.error(ErrorMessage.USER_LOGIN + e );
+            throw new RuntimeException(e);
         }
         return user;
     }
@@ -79,24 +80,4 @@ public class JdbcUserDao implements UserDao {
     public List<User> findAll() {
         return null;
     }
-
-/*
-    @Override
-    public boolean isUserExist(String login, String password) {
-        boolean isExist = false;
-        try (Connection connection = JdbcDaoFactory.getConnection()) {
-            PreparedStatement stmt = connection.prepareStatement(MysqlQuery.FIND_USER);
-            stmt.setNString(1, login);
-            stmt.setNString(2, password);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                isExist = true;
-            }
-        } catch (SQLException e) {
-            Logger logger =  LogManager.getLogger(JdbcUserDao.class);
-            logger.error("Verification of user existing error" + e );
-        }
-        return isExist;
-    }
-*/
 }

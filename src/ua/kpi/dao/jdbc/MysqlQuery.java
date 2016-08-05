@@ -1,6 +1,8 @@
 package ua.kpi.dao.jdbc;
 
 /**
+ * Interface consists queries for MySQL database
+ *
  * Created by Сергей on 28.07.2016.
  */
 public interface MysqlQuery {

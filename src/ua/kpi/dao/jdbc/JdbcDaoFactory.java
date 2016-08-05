@@ -13,8 +13,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 /**
  * Extends DaoFactory class.
@@ -29,6 +28,8 @@ public class JdbcDaoFactory extends DaoFactory {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
 */
+    private static final String DARA_SOURCE = "java:comp/env/jdbc/FacultativeDB";
+
     /**
      * data source for connection to database
      */
@@ -37,10 +38,11 @@ public class JdbcDaoFactory extends DaoFactory {
     public JdbcDaoFactory() {
     	try {
             InitialContext ic = new InitialContext();
-            ds = (DataSource) ic.lookup("java:comp/env/jdbc/FacultativeDB");
+            ds = (DataSource) ic.lookup(DARA_SOURCE);
         } catch (NamingException e) {
-            Logger logger =  LogManager.getLogger(JdbcDaoFactory.class);
-            logger.error("Dao Factory creating error: " + e );
+            Logger logger =  Logger.getLogger(JdbcDaoFactory.class);
+            logger.error(ErrorMessage.CREATE_DAO_FACTORY + e );
+            throw new RuntimeException(e);
         }
     	/*
     	try {

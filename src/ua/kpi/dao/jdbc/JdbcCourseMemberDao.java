@@ -1,7 +1,6 @@
 package ua.kpi.dao.jdbc;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import ua.kpi.dao.CourseMemberDao;
 import ua.kpi.model.entities.Course;
 import ua.kpi.model.entities.CourseMember;
@@ -28,46 +27,48 @@ public class JdbcCourseMemberDao implements CourseMemberDao {
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 Teacher teacher = new Teacher(
-                        rs.getInt("id_teacher"),
-                        rs.getString("t.name"),
-                        rs.getString("t.login"),
-                        rs.getString("t.password"));
+                        rs.getInt(ColumnName.ID_TEACHER),
+                        rs.getString(ColumnName.TEACHER_NAME),
+                        rs.getString(ColumnName.TEACHER_LOGIN),
+                        rs.getString(ColumnName.TEACHER_PASSWORD));
                 Student student = new Student(
-                        rs.getInt("id_student"),
-                        rs.getString("s.name"),
-                        rs.getString("s.login"),
-                        rs.getString("s.password"));
+                        rs.getInt(ColumnName.ID_STUDENT),
+                        rs.getString(ColumnName.STUDENT_NAME),
+                        rs.getString(ColumnName.STUDENT_LOGIN),
+                        rs.getString(ColumnName.STUDENT_PASSWORD));
                 Course course = new Course(
-                        rs.getInt("id_course"),
-                        rs.getString("course"),
+                        rs.getInt(ColumnName.ID_COURSE),
+                        rs.getString(ColumnName.COURSE),
                         teacher,
-                        rs.getDate("start_date"),
-                        rs.getDate("end_date"));
+                        rs.getDate(ColumnName.START_DATE),
+                        rs.getDate(ColumnName.END_DATE));
                 courseMember = new CourseMember(
                         rs.getInt(1),
                         course,
                         student,
-                        rs.getInt("mark"),
-                        rs.getString("comment"));
+                        rs.getInt(ColumnName.MARK),
+                        rs.getString(ColumnName.COMMENT));
             }
             stmt.close();
         } catch (SQLException e) {
-            Logger logger =  LogManager.getLogger(JdbcCourseMemberDao.class);
-            logger.error("Finding course member by student and course id error" + e );
+            Logger logger =  Logger.getLogger(JdbcCourseMemberDao.class);
+            logger.error(ErrorMessage.FIND_COURSE_MEMBER_BY_ID + e );
+            throw new RuntimeException(e);
         }
         return courseMember;
     }
 
     @Override
     public List<CourseMember> findByTeacherID(int id) {
-        List<CourseMember> courseMembers = new ArrayList<>();
+        List<CourseMember> courseMembers;
         try (Connection connection = JdbcDaoFactory.getConnection()){
             PreparedStatement stmt = connection.prepareStatement(MysqlQuery.FIND_STUDENTS_OF_TEACHER_BY_ID);
             stmt.setInt(1, id);
             courseMembers = getCourseMembersByQuery(stmt);
         } catch (SQLException e) {
-            Logger logger =  LogManager.getLogger(JdbcCourseMemberDao.class);
-            logger.error("Finding course members by teacher id error" + e );
+            Logger logger =  Logger.getLogger(JdbcCourseMemberDao.class);
+            logger.error(ErrorMessage.COURSE_MEMBERS_OF_TEACHER + e );
+            throw new RuntimeException(e);
         }
         return courseMembers;
     }
@@ -80,8 +81,9 @@ public class JdbcCourseMemberDao implements CourseMemberDao {
             stmt.setInt(2, student.getId());
             stmt.executeUpdate();
         } catch (SQLException e) {
-            Logger logger =  LogManager.getLogger(JdbcCourseMemberDao.class);
-            logger.error("Creating course member error" + e );
+            Logger logger =  Logger.getLogger(JdbcCourseMemberDao.class);
+            logger.error(ErrorMessage.CREATE_COURSE_MEMBER + e );
+            throw new RuntimeException(e);
         }
     }
 
@@ -96,27 +98,28 @@ public class JdbcCourseMemberDao implements CourseMemberDao {
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 Teacher teacher = new Teacher(
-                        rs.getInt("id_teacher"),
-                        rs.getString("t.name"),
-                        rs.getString("t.login"),
-                        rs.getString("t.password"));
-                Course course = new Course(//todo: find course from another dao?
+                        rs.getInt(ColumnName.ID_TEACHER),
+                        rs.getString(ColumnName.TEACHER_NAME),
+                        rs.getString(ColumnName.TEACHER_LOGIN),
+                        rs.getString(ColumnName.TEACHER_PASSWORD));
+                Course course = new Course(
                         courseId,
-                        rs.getString("course"),
+                        rs.getString(ColumnName.COURSE),
                         teacher,
-                        rs.getDate("start_date"),
-                        rs.getDate("end_date"));
+                        rs.getDate(ColumnName.START_DATE),
+                        rs.getDate(ColumnName.END_DATE));
                 courseMember = new CourseMember(
                         rs.getInt(1),
                         course,
                         student,
-                        rs.getInt("mark"),
-                        rs.getString("comment"));
+                        rs.getInt(ColumnName.MARK),
+                        rs.getString(ColumnName.COMMENT));
             }
             stmt.close();
         } catch (SQLException e) {
-            Logger logger =  LogManager.getLogger(JdbcCourseMemberDao.class);
-            logger.error("Finding course member by student and course id error" + e );
+            Logger logger =  Logger.getLogger(JdbcCourseMemberDao.class);
+            logger.error(ErrorMessage.FIND_COURSE_MEMBER_BY_STUDENT_AND_COURSE_ID+ e );
+            throw new RuntimeException(e);
         }
         return courseMember;
     }
@@ -129,8 +132,9 @@ public class JdbcCourseMemberDao implements CourseMemberDao {
             stmt.setInt(1, id);
             courseMembers = getCourseMembersByQuery(stmt);
         } catch (SQLException e) {
-            Logger logger =  LogManager.getLogger(JdbcCourseMemberDao.class);
-            logger.error("Finding course members by student id error" + e );
+            Logger logger =  Logger.getLogger(JdbcCourseMemberDao.class);
+            logger.error(ErrorMessage.FIND_COURSE_MEMBERS_WITH_STUDENT_BY_ID + e );
+            throw new RuntimeException(e);
         }
         return courseMembers;
     }
@@ -146,26 +150,26 @@ public class JdbcCourseMemberDao implements CourseMemberDao {
         List<CourseMember> res = new ArrayList<>();
         while (rs.next()) {
             Teacher teacher = new Teacher(
-                    rs.getInt("id_teacher"),
-                    rs.getString("t.name"),
-                    rs.getString("t.login"),
-                    rs.getString("t.password"));
+                    rs.getInt(ColumnName.ID_TEACHER),
+                    rs.getString(ColumnName.TEACHER_NAME),
+                    rs.getString(ColumnName.TEACHER_LOGIN),
+                    rs.getString(ColumnName.TEACHER_PASSWORD));
             Student student = new Student(
-                    rs.getInt("id_student"),
-                    rs.getString("s.name"),
-                    rs.getString("s.login"),
-                    rs.getString("s.password"));
+                    rs.getInt(ColumnName.ID_STUDENT),
+                    rs.getString(ColumnName.STUDENT_NAME),
+                    rs.getString(ColumnName.STUDENT_LOGIN),
+                    rs.getString(ColumnName.STUDENT_PASSWORD));
             Course course = new Course(
-                    rs.getInt("id_course"),
-                    rs.getString("course"),
+                    rs.getInt(ColumnName.ID_COURSE),
+                    rs.getString(ColumnName.COURSE),
                     teacher,
-                    rs.getDate("start_date"),
-                    rs.getDate("end_date"));
+                    rs.getDate(ColumnName.START_DATE),
+                    rs.getDate(ColumnName.END_DATE));
             res.add(new CourseMember(rs.getInt(1),
                     course,
                     student,
-                    rs.getInt("mark"),
-                    rs.getString("comment")));
+                    rs.getInt(ColumnName.MARK),
+                    rs.getString(ColumnName.COMMENT)));
         }
         statement.close();
         return res;
@@ -192,7 +196,8 @@ public class JdbcCourseMemberDao implements CourseMemberDao {
             }
             stmt.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            Logger logger =  Logger.getLogger(JdbcCourseMemberDao.class);
+            logger.error(ErrorMessage.UPDATE_COURSE_MEMBER + e );
             throw new RuntimeException(e);
         }
         return false;

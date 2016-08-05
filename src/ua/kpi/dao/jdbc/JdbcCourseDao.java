@@ -1,7 +1,6 @@
 package ua.kpi.dao.jdbc;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import ua.kpi.dao.CourseDao;
 import ua.kpi.model.entities.Course;
 import ua.kpi.model.entities.Teacher;
@@ -25,21 +24,22 @@ public class JdbcCourseDao implements CourseDao {
             ResultSet rs = stmt.executeQuery(MysqlQuery.FIND_ALL_COURSES);
             while (rs.next()) {
                 Teacher teacher = new Teacher(
-                                        rs.getInt("id_teacher"),
-                                        rs.getString("name"),
-                                        rs.getString("login"),
-                                        rs.getString("password"));
+                                        rs.getInt(ColumnName.ID_TEACHER),
+                                        rs.getString(ColumnName.NAME),
+                                        rs.getString(ColumnName.LOGIN),
+                                        rs.getString(ColumnName.PASSWORD));
                 res.add(
                         new Course(rs.getInt(1),
-                                rs.getString("course"),
+                                rs.getString(ColumnName.COURSE),
                                 teacher,
-                                rs.getDate("start_date"),
-                                rs.getDate("end_date")));
+                                rs.getDate(ColumnName.START_DATE),
+                                rs.getDate(ColumnName.END_DATE)));
             }
             stmt.close();
         } catch (SQLException e) {
-            Logger logger =  LogManager.getLogger(JdbcCourseDao.class);
-            logger.error("Finding all courses error" + e );
+            Logger logger =  Logger.getLogger(JdbcCourseDao.class);
+            logger.error(ErrorMessage.FIND_ALL_COURSES + e );
+            throw new RuntimeException(e);
         }
         return res;
     }
@@ -53,20 +53,21 @@ public class JdbcCourseDao implements CourseDao {
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 Teacher teacher = new Teacher(
-                        rs.getInt("id_teacher"),
-                        rs.getString("name"),
-                        rs.getString("login"),
-                        rs.getString("password"));
+                        rs.getInt(ColumnName.ID_TEACHER),
+                        rs.getString(ColumnName.NAME),
+                        rs.getString(ColumnName.LOGIN),
+                        rs.getString(ColumnName.PASSWORD));
                 res = new Course(rs.getInt(1),
-                                rs.getString("course"),
-                                teacher,
-                                rs.getDate("start_date"),
-                                rs.getDate("end_date"));
+                        rs.getString(ColumnName.COURSE),
+                        teacher,
+                        rs.getDate(ColumnName.START_DATE),
+                        rs.getDate(ColumnName.END_DATE));
             }
             stmt.close();
         } catch (SQLException e) {
-            Logger logger =  LogManager.getLogger(JdbcCourseDao.class);
-            logger.error("Finding all courses error" + e );
+            Logger logger =  Logger.getLogger(JdbcCourseDao.class);
+            logger.error(ErrorMessage.FIND_COURSE + e );
+            throw new RuntimeException(e);
         }
         return res;
     }
