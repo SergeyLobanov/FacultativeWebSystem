@@ -15,5 +15,6 @@ public interface ErrorMessage {
     String FIND_COURSE_MEMBERS_WITH_STUDENT_BY_ID = "Finding course members by student id error ";
     String UPDATE_COURSE_MEMBER = "Updating course member error ";
     String CREATE_DAO_FACTORY = "Dao Factory creating error: ";
+    String GET_DAO_FACTORY = "Dao Factory creating error: ";
     String USER_LOGIN = "User login error ";
 }

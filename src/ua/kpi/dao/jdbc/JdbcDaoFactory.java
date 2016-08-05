@@ -41,7 +41,7 @@ public class JdbcDaoFactory extends DaoFactory {
             ds = (DataSource) ic.lookup(DARA_SOURCE);
         } catch (NamingException e) {
             Logger logger =  Logger.getLogger(JdbcDaoFactory.class);
-            logger.error(ErrorMessage.CREATE_DAO_FACTORY + e );
+            logger.error(ErrorMessage.GET_DAO_FACTORY + e );
             throw new RuntimeException(e);
         }
     	/*
