@@ -13,7 +13,8 @@ public enum CommandList {
     COURSE_INFO(new CourseInfoCommand()),
     JOIN_COURSE(new JoinCourseCommand()),
     ESTIMATE_STUDENT(new EstimateCommand()),
-    SET_MARK(new SetMarkCommand());
+    SET_MARK(new SetMarkCommand()),
+    LOCALE(new LocalisationCommand());
 
     /**
      * command value

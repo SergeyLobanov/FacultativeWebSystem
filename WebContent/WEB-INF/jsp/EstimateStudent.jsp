@@ -2,11 +2,14 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="ex" uri="/WEB-INF/userInfo.tld"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<!DOCTYPE html">
 <html>
+    <fmt:setLocale value="${lang}" />
+    <fmt:setBundle basename="ua.kpi.localization.messeges" var="bundle" />
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Estimate student</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title><fmt:message key="estimate.label.title" bundle="${bundle}" /></title>
 </head>
 <body>
 	
@@ -14,11 +17,11 @@
 		<ex:userInfo user="${user}"/><br>
 		<c:out value="${courseMember}"/> course<br>
 		
-		Mark <input type="number" min="0" max="5" name="mark" value="${courseMember.getMark()}"><br>
-		Comment<input type="text" name="comment" value="${courseMember.getComment()}"><br>
+		<fmt:message key="estimate.label.mark" bundle="${bundle}"/> <input type="number" min="0" max="5" name="mark" value="${courseMember.getMark()}"><br>
+		<fmt:message key="estimate.label.comment" bundle="${bundle}"/><input type="text" name="comment" value="${courseMember.getComment()}"><br>
 		<INPUT type="hidden" name="command" value="SET_MARK"/>
 		<INPUT type="hidden" name="index" value="${courseMember.getCourseMemberID()}"/>
-		<input type="submit" value="Save">
+		<input type="submit" value="<fmt:message key="estimate.label.save" bundle="${bundle}"/>">
 		
 		<br><c:out value="${message}"/><br>					    	
 	</form>

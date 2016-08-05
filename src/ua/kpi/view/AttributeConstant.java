@@ -19,4 +19,6 @@ public interface AttributeConstant {
     String MARK = "mark";
     String COMMENT = "comment";
     String UTF_8 = "UTF-8";
+    String LOCALE = "locale";
+    String LANG = "lang";
 }
