@@ -26,11 +26,11 @@ public class LogInCommand implements Command {
         String login = request.getParameter(AttributeConstant.LOGIN);
         String password = request.getParameter(AttributeConstant.PASSWORD);
 
-        if (!userService.isUserExist(login, password)) {
+        User user = userService.logIn(login, password);
+        if (user == null) {
             request.setAttribute(AttributeConstant.MESSAGE, MessageConstant.WRONG_LOGIN_OR_PASSWORD);
             return LinkConstant.INDEX;
         }
-        User user = userService.logIn(login, password);
         request.getSession().setAttribute(AttributeConstant.USER, user);
         request.getSession().setAttribute(AttributeConstant.STATUS, user.getStatus().toString());
         return LinkConstant.MAIN;

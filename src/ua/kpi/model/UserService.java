@@ -25,19 +25,6 @@ public class UserService {
     }
 
     /**
-     * verifies is user with such login and password exists
-     * @param login of user
-     * @param password of user
-     * @return result of verification
-     */
-    public boolean isUserExist(String login, String password) {
-        DaoFactory factory = DaoFactory.getFactory();
-        UserDao userDao = factory.createUserDao();
-        String hashPass = getHashMD5(password);
-        return (userDao.logIn(login, hashPass) != null);
-    }
-
-    /**
      * log in the facultative web system as User with
      * such login and password
      * @param login of user
