@@ -10,6 +10,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><fmt:message key="main.label.title" bundle="${bundle}" /></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
@@ -17,11 +18,11 @@
 
 	<form method="POST" action="Controller">
 		<INPUT type="hidden" name="command" value="MY_PROFILE_${status}"/>
-		<input type="submit" value="<fmt:message key="main.button.myProfile" bundle="${bundle}"/>">
+		<input class="button" type="submit" value="<fmt:message key="main.button.myProfile" bundle="${bundle}"/>">
 	</form>
 	<form method="POST" action="Controller">
 		<INPUT type="hidden" name="command" value="COURSE_LIST"/>
-		<input type="submit" value="<fmt:message key="main.button.allCourses" bundle="${bundle}"/>">
+		<input class="button" type="submit" value="<fmt:message key="main.button.allCourses" bundle="${bundle}"/>">
 	</form>
 	
 </body>

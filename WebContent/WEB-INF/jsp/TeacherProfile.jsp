@@ -9,6 +9,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><fmt:message key="myProfile.label.title" bundle="${bundle}" /></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
@@ -20,9 +21,9 @@
 		</caption>
 		<c:set var="course" value="${studentList.get(0).getCourse()}"/>
 		  <tr>
-		    <td><fmt:message key="myProfile.label.student" bundle="${bundle}"/></td>
-		    <td><fmt:message key="myProfile.label.mark" bundle="${bundle}"/></td>
-		    <td><fmt:message key="myProfile.label.comment" bundle="${bundle}"/></td>
+		    <th><fmt:message key="myProfile.label.student" bundle="${bundle}"/></th>
+		    <th><fmt:message key="myProfile.label.mark" bundle="${bundle}"/></th>
+		    <th><fmt:message key="myProfile.label.comment" bundle="${bundle}"/></th>
 		  </tr>			
 				<c:forEach var="student" items="${studentList}">
 				  <tr>
@@ -33,7 +34,7 @@
 							<form method="POST" action="Controller">
 								<INPUT type="hidden" name="command" value="ESTIMATE_STUDENT"/>
 								<INPUT type="hidden" name="index" value="${student.getCourseMemberID()}"/>
-								<input type="submit" value="<fmt:message key="myProfile.button.estimate" bundle="${bundle}"/>">		
+								<input class="button" type="submit" value="<fmt:message key="myProfile.button.estimate" bundle="${bundle}"/>">		
 							</form>	
 						</td>	
 				  </tr>		

@@ -7,18 +7,19 @@
     <fmt:setLocale value="${lang}" />
     <fmt:setBundle basename="ua.kpi.localization.messeges" var="bundle" />
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title><fmt:message key="allCourses.label.title" bundle="${bundle}" /></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title><fmt:message key="allCourses.label.title" bundle="${bundle}" /></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	
 		<table border="1" align="center">
 		<caption><fmt:message key="allCourses.label.title" bundle="${bundle}" /></caption>
 		  <tr>
-		    <td><fmt:message key="allCourses.label.course" bundle="${bundle}" /></td>
-		    <td><fmt:message key="allCourses.label.teacher" bundle="${bundle}" /></td>
-		    <td><fmt:message key="allCourses.label.start" bundle="${bundle}" /></td>
-		    <td><fmt:message key="allCourses.label.end" bundle="${bundle}" /></td>
+		    <th><fmt:message key="allCourses.label.course" bundle="${bundle}" /></th>
+		    <th><fmt:message key="allCourses.label.teacher" bundle="${bundle}" /></th>
+		    <th><fmt:message key="allCourses.label.start" bundle="${bundle}" /></th>
+		    <th><fmt:message key="allCourses.label.end" bundle="${bundle}" /></th>
 		  </tr>		
 			<c:forEach var="course" items="${courseList}">
 				  <tr>
@@ -30,7 +31,7 @@
 					<form method="POST" action="Controller">
 						<INPUT type="hidden" name="command" value="COURSE_INFO"/>
 						<input type="hidden" name="courseId" value="${course.getId()}">
-						<input type="submit" value="<fmt:message key="allCourses.button.courseInfo" bundle="${bundle}"/>">
+						<input class="button" type="submit" value="<fmt:message key="allCourses.button.courseInfo" bundle="${bundle}"/>">
 					</form>		
 					</td>					
 				  </tr>					

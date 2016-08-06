@@ -8,8 +8,9 @@
     <fmt:setLocale value="${lang}" />
     <fmt:setBundle basename="ua.kpi.localization.messeges" var="bundle" />
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title><fmt:message key="courseInfo.label.title" bundle="${bundle}" /></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title><fmt:message key="courseInfo.label.title" bundle="${bundle}" /></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	
@@ -20,9 +21,9 @@
 		<c:if test="${status eq 'STUDENT'}">
 			<INPUT type="hidden" name="command" value="JOIN_COURSE"/>
 			<input type="hidden" name="courseId" value="${course.getId()}"/>
-			<input type="submit" value="<fmt:message key="courseInfo.button.join" bundle="${bundle}"/>">
+			<input class="button" type="submit" value="<fmt:message key="courseInfo.button.join" bundle="${bundle}"/>">
 		</c:if>	
-		<br><c:out value="${message}"/><br>					    	
+		<br><br><c:out value="${message}"/><br>					    	
 	</form>
 
 </body>

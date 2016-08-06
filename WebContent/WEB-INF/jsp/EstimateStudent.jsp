@@ -10,6 +10,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><fmt:message key="estimate.label.title" bundle="${bundle}" /></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	
@@ -21,9 +22,9 @@
 		<fmt:message key="estimate.label.comment" bundle="${bundle}"/><input type="text" name="comment" value="${courseMember.getComment()}"><br>
 		<INPUT type="hidden" name="command" value="SET_MARK"/>
 		<INPUT type="hidden" name="index" value="${courseMember.getCourseMemberID()}"/>
-		<input type="submit" value="<fmt:message key="estimate.label.save" bundle="${bundle}"/>">
+		<input class="button" type="submit" value="<fmt:message key="estimate.label.save" bundle="${bundle}"/>">
 		
-		<br><c:out value="${message}"/><br>					    	
+		<br><br><c:out value="${message}"/><br>					    	
 	</form>
 
 </body>

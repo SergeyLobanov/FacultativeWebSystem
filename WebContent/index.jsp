@@ -5,33 +5,43 @@
 <c:set var="lang" value="${not empty lang ? lang : 'en_US'}" scope="session" />
 <fmt:setLocale value="${lang}" />
 <fmt:setBundle basename="ua.kpi.localization.messeges" var="bundle"/>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><fmt:message key="index.label.title" bundle="${bundle}" /></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/index_style.css">
 </head>
 <body>
-		<form method="POST" action="Controller">
-			<input type="hidden" name="command" value="LOCALE">
-			<input type="hidden" name="locale" value="en_US">
-			<input type="submit" value="en">
-        </form>
-		<form method="POST" action="Controller">
-			<input type="hidden" name="command" value="LOCALE">
-			<input type="hidden" name="locale" value="ru_RU">
-			<input type="submit" value="ru">
-        </form>
-
-	<form method="POST" action="Controller">
-		<label><fmt:message key="index.label.login" bundle="${bundle}"/>:</label>
-		<input type="text" name="login"><br>
-		<label><fmt:message key="index.label.password" bundle="${bundle}"/>:</label>
-		<input type="password" name="password"><br>
-		<INPUT type="hidden" name="command" value="LOG_IN"/>
-		<input type="submit" value="<fmt:message key="index.button.submit" bundle="${bundle}"/>">
-	</form>
-	<br><c:out value="${message}"/><br>	
-
+	<div class="languages">
+		<ul class="lang-switch">
+			<li>
+			<a href="http://localhost:8087/FacultativeWebSystem/Controller
+			?command=LOCALE&locale=en_US">English</a>			
+			</li>
+			<li>
+			<a href="http://localhost:8087/FacultativeWebSystem/Controller
+			?command=LOCALE&locale=ru_RU">Русский</a>
+			</li>
+		</ul>
+	</div>
+	
+		<form  method="POST" action="Controller">
+			<fieldset class="form_info">
+				<label for="login"><fmt:message key="index.label.login" bundle="${bundle}"/>:</label>
+				<input type="text" name="login"><br><br>
+				<label for="password"><fmt:message key="index.label.password" bundle="${bundle}"/>:</label>
+				<input type="password" name="password"><br>
+			</fieldset>
+			<fieldset class="form_action">
+				<INPUT type="hidden" name="command" value="LOG_IN"/>
+				<input class="btn" type="submit" value="<fmt:message key="index.button.submit" bundle="${bundle}"/>">
+			</fieldset>			
+		</form>
+		<div id="message">
+			<br><c:out value="${message}"/><br>	
+		</div>
+ 
 </body>
 </html>

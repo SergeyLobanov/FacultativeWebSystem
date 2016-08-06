@@ -9,18 +9,19 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><fmt:message key="myProfile.label.title" bundle="${bundle}" /></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 		<ex:userInfo user="${user}"/><br>
 
 		<table border="1" align="center">
 		  <tr>
-		    <td><fmt:message key="studProfile.label.course" bundle="${bundle}" /></td>
-		    <td><fmt:message key="studProfile.label.teacher" bundle="${bundle}" /></td>
-		    <td><fmt:message key="studProfile.label.start" bundle="${bundle}" /></td>
-		    <td><fmt:message key="studProfile.label.end" bundle="${bundle}" /></td>
-		    <td><fmt:message key="myProfile.label.mark" bundle="${bundle}" /></td>
-		    <td><fmt:message key="myProfile.label.comment" bundle="${bundle}" /></td>
+		    <th><fmt:message key="studProfile.label.course" bundle="${bundle}" /></th>
+		    <th><fmt:message key="studProfile.label.teacher" bundle="${bundle}" /></th>
+		    <th><fmt:message key="studProfile.label.start" bundle="${bundle}" /></th>
+		    <th><fmt:message key="studProfile.label.end" bundle="${bundle}" /></th>
+		    <th><fmt:message key="myProfile.label.mark" bundle="${bundle}" /></th>
+		    <th><fmt:message key="myProfile.label.comment" bundle="${bundle}" /></th>
 		  </tr>			
 				<c:forEach var="course" items="${courseList}">
 				  <tr>
