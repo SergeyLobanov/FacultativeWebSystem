@@ -2,7 +2,7 @@ package ua.kpi.dao;
 
 import org.apache.log4j.Logger;
 
-import ua.kpi.dao.jdbc.ErrorMessage;
+import ua.kpi.dao.jdbc.constants.ErrorMessage;
 import ua.kpi.dao.jdbc.JdbcDaoFactory;
 
 /**

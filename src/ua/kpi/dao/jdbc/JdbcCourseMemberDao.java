@@ -2,6 +2,9 @@ package ua.kpi.dao.jdbc;
 
 import org.apache.log4j.Logger;
 import ua.kpi.dao.CourseMemberDao;
+import ua.kpi.dao.jdbc.constants.ColumnName;
+import ua.kpi.dao.jdbc.constants.ErrorMessage;
+import ua.kpi.dao.jdbc.constants.MysqlQuery;
 import ua.kpi.model.entities.Course;
 import ua.kpi.model.entities.CourseMember;
 import ua.kpi.model.entities.Student;

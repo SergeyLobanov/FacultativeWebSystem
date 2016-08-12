@@ -1,15 +1,13 @@
 package ua.kpi.tag;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
-import ua.kpi.dao.jdbc.ErrorMessage;
+import ua.kpi.dao.jdbc.constants.ErrorMessage;
 import ua.kpi.model.entities.User;
 
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
-import java.io.StringWriter;
 
 /**
  * Custom tag prints info about user
@@ -27,15 +25,13 @@ public class UserInfoTag extends SimpleTagSupport {
         this.user = user;
     }
 
-    StringWriter sw = new StringWriter();
-
     public void doTag() {
         JspWriter out = getJspContext().getOut();
         try {
             out.println(user.getName());
             out.println(user.getStatus());
         } catch (IOException e) {
-            Logger logger =  LogManager.getLogger(UserInfoTag.class);
+            Logger logger =  Logger.getLogger(UserInfoTag.class);
             logger.error(ErrorMessage.USER_TAG_ERROR + e );
             throw new RuntimeException(e);
         }

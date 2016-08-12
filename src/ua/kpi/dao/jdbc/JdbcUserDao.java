@@ -2,6 +2,9 @@ package ua.kpi.dao.jdbc;
 
 
 import ua.kpi.dao.UserDao;
+import ua.kpi.dao.jdbc.constants.ColumnName;
+import ua.kpi.dao.jdbc.constants.ErrorMessage;
+import ua.kpi.dao.jdbc.constants.MysqlQuery;
 import ua.kpi.model.entities.Student;
 import ua.kpi.model.entities.Teacher;
 import ua.kpi.model.entities.User;

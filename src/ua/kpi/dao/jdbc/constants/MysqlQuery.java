@@ -1,4 +1,4 @@
-package ua.kpi.dao.jdbc;
+package ua.kpi.dao.jdbc.constants;
 
 /**
  * Interface consists queries for MySQL database
