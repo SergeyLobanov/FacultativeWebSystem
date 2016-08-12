@@ -8,6 +8,11 @@ package ua.kpi.model.entities;
 public class CourseMember {
 
     /**
+     * The maximal mark value
+     */
+    private static final int MAX_MARK = 5;
+
+    /**
      * course member id
      */
     private int courseMemberID;
@@ -35,7 +40,7 @@ public class CourseMember {
         this.courseMemberID = courseMemberID;
         this.course = course;
         this.student = student;
-        this.mark = mark;
+        this.setMark(mark);
         this.comment = comment;
     }
 
@@ -67,7 +72,16 @@ public class CourseMember {
         return mark;
     }
 
+    /**
+     *
+     * @param mark mark should be more than 0 and less than MAX_MARK
+     * @throws IllegalArgumentException if mark < 0
+     * or more than MAX_MARK value
+     */
     public void setMark(int mark) {
+        if (mark < 0 || mark > MAX_MARK) {
+            throw new IllegalArgumentException();
+        }
         this.mark = mark;
     }
 
