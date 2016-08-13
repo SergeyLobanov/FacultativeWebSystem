@@ -23,13 +23,13 @@ public class AuthorizationFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        if(servletRequest.getAttribute(AttributeConstant.USER) != null) {
-            filterChain.doFilter(servletRequest, servletResponse);
-        } else {
+        if(servletRequest.getAttribute(AttributeConstant.USER) == null) {
         	servletRequest.setAttribute(AttributeConstant.MESSAGE, MessageConstant.AUTHORISE_FOR_WORK);
 			RequestDispatcher dispatcher = servletRequest.getRequestDispatcher(LinkConstant.INDEX);
 			dispatcher.forward(servletRequest, servletResponse);            
         }
+        filterChain.doFilter(servletRequest, servletResponse);
+        
     }
 
     @Override
