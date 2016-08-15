@@ -16,7 +16,7 @@
 	
 	<form method="POST" action="Controller">	
 		<ex:userInfo user="${user}"/><br>
-		<c:out value="${courseMember}"/> course<br>
+		<fmt:message key="estimate.label.student" bundle="${bundle}"/> : <c:out value="${courseMember.getStudent().getName()}"/><br>
 		
 		<fmt:message key="estimate.label.mark" bundle="${bundle}"/> <input type="number" min="0" max="5" name="mark" value="${courseMember.getMark()}"><br>
 		<fmt:message key="estimate.label.comment" bundle="${bundle}"/><input type="text" name="comment" value="${courseMember.getComment()}"><br>

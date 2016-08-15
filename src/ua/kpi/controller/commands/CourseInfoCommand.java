@@ -17,7 +17,7 @@ import java.io.IOException;
  * Created by Сергей on 29.07.2016.
  */
 public class CourseInfoCommand implements Command {
-    CourseService courseService = CourseService.getInstance();
+    public CourseService courseService = CourseService.getInstance();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

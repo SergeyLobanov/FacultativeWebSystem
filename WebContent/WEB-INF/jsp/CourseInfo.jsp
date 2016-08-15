@@ -16,9 +16,16 @@
 	
 	<form method="POST" action="Controller">	
 		<ex:userInfo user="${user}"/><br>
-		<c:out value="${course}"/><br>
-		<c:out value="${course.getCourseTeacher()}"/><br>
-		<c:if test="${status eq 'STUDENT'}">
+		<fmt:message key="allCourses.button.courseInfo" bundle="${bundle}"/><br>
+		<fmt:message key="allCourses.label.course" bundle="${bundle}"/> : 
+		<c:out value="${course.getCourseName()}"/><br>
+		<fmt:message key="allCourses.label.teacher" bundle="${bundle}"/> : 
+		<c:out value="${course.getCourseTeacher().getName()}"/><br>
+		<fmt:message key="allCourses.label.start" bundle="${bundle}"/> : 
+		<c:out value="${course.getStartDate()}"/><br>
+		<fmt:message key="allCourses.label.end" bundle="${bundle}"/> : 
+		<c:out value="${course.getEndDate()}"/><br>
+		<c:if test="${user.getStatus() eq 'STUDENT'}">
 			<INPUT type="hidden" name="command" value="JOIN_COURSE"/>
 			<input type="hidden" name="courseId" value="${course.getId()}"/>
 			<input class="button" type="submit" value="<fmt:message key="courseInfo.button.join" bundle="${bundle}"/>">

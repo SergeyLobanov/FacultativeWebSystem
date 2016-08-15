@@ -17,7 +17,7 @@
 	<fmt:message key="main.label.greeting" bundle="${bundle}"/> <ex:userInfo user="${user}"/> <br>
 
 	<form method="POST" action="Controller">
-		<INPUT type="hidden" name="command" value="MY_PROFILE_${status}"/>
+		<INPUT type="hidden" name="command" value="MY_PROFILE_${user.getStatus()}"/>
 		<input class="button" type="submit" value="<fmt:message key="main.button.myProfile" bundle="${bundle}"/>">
 	</form>
 	<form method="POST" action="Controller">

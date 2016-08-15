@@ -32,7 +32,7 @@ public class LogInCommand implements Command {
             return LinkConstant.INDEX;
         }
         request.getSession().setAttribute(AttributeConstant.USER, user);
-        request.getSession().setAttribute(AttributeConstant.STATUS, user.getStatus().toString());
+        //request.getSession().setAttribute(AttributeConstant.STATUS, user.getStatus().toString());
         return LinkConstant.MAIN;
     }
 }
