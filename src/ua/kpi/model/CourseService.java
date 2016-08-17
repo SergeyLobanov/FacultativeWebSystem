@@ -43,4 +43,16 @@ public class CourseService {
         CourseDao courseDao = factory.createCourseDao();
         return courseDao.find(courseId);
     }
+
+	public void createCourse(Course course) {
+        DaoFactory factory = DaoFactory.getFactory();
+        CourseDao courseDao = factory.createCourseDao();
+        courseDao.create(course);		
+	}
+	
+	public void updateCourse(Course course) {
+        DaoFactory factory = DaoFactory.getFactory();
+        CourseDao courseDao = factory.createCourseDao();
+        courseDao.update(course);		
+	}
 }

@@ -30,7 +30,17 @@
 			<input type="hidden" name="courseId" value="${course.getId()}"/>
 			<input class="button" type="submit" value="<fmt:message key="courseInfo.button.join" bundle="${bundle}"/>">
 		</c:if>	
-		<br><br><c:out value="${message}"/><br>					    	
+		<br><br><c:out value="${message}"/><br>		
+		
+		<c:if test="${user.getStatus() eq 'TEACHER'}">
+		Feature for teachers  <br>		
+        <c:set var="courseTeacherName" value="${course.getCourseTeacher().getName()}"/>
+			<c:if test="${user.getName() eq courseTeacherName}">
+				<INPUT type="hidden" name="command" value="EDIT_COURSE"/>
+				<input type="hidden" name="courseId" value="${course.getId()}">
+				<input class="button" type="submit" value="<fmt:message key="courseInfo.button.edit" bundle="${bundle}"/>">
+			</c:if>
+		</c:if>				    	
 	</form>
 
 </body>

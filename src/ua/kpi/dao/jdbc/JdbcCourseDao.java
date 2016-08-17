@@ -18,7 +18,9 @@ import java.util.List;
  * Created by Сергей on 28.07.2016.
  */
 public class JdbcCourseDao implements CourseDao {
-
+	
+	
+	
     @Override
     public List<Course> findAll() {
         List<Course> res = new ArrayList<>();
@@ -77,12 +79,37 @@ public class JdbcCourseDao implements CourseDao {
 
     @Override
     public void create(Course course) {
-        throw new UnsupportedOperationException();
+    	try(Connection connection = JdbcDaoFactory.getConnection()) {
+            PreparedStatement stmt = connection.prepareStatement(MysqlQuery.CREATE_COURSE);
+            stmt.setString(1,course.getCourseName());
+            stmt.setInt(2, course.getCourseTeacher().getId());
+            stmt.setDate(3, (Date) course.getStartDate());
+            stmt.setDate(4, (Date) course.getEndDate());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            Logger logger =  Logger.getLogger(JdbcCourseDao.class);
+            logger.error(ErrorMessage.CREATE_COURSE_MEMBER + e );
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public boolean update(Course course) {
-        return false;
+    	int update;
+    	try(Connection connection = JdbcDaoFactory.getConnection()) {
+            PreparedStatement stmt = connection.prepareStatement(MysqlQuery.UPDATE_COURSE);
+            stmt.setString(1,course.getCourseName());//todo:update
+            stmt.setInt(2, course.getCourseTeacher().getId());
+            stmt.setDate(3, (Date) course.getStartDate());
+            stmt.setDate(4, (Date) course.getEndDate());
+            stmt.setInt(5, course.getId());
+            update = stmt.executeUpdate();
+        } catch (SQLException e) {
+            Logger logger =  Logger.getLogger(JdbcCourseDao.class);
+            logger.error(ErrorMessage.CREATE_COURSE_MEMBER + e );
+            throw new RuntimeException(e);
+        }
+    	return (update > 0);
     }
 
     @Override

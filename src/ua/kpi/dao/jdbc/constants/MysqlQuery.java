@@ -24,6 +24,12 @@ public interface MysqlQuery {
     String CREATE_COURSE_MEMBER = "INSERT INTO course_members " +
             "(id_course, id_student)" +
             "VALUES (?, ?)";
+    String CREATE_COURSE = "INSERT INTO courses "+
+            "(course, id_teacher, start_date, end_date) " +
+            "VALUES (?, ?, ?, ?)";
+    String UPDATE_COURSE = "UPDATE courses "+
+            "SET course = ?, id_teacher = ?, start_date = ?, end_date = ? " +
+            "WHERE id_course = ?";
     String UPDATE_COURSE_MEMBER = "UPDATE course_members " +
             "SET mark = ?, comment= ? " +
             "WHERE id_course_member= ?";

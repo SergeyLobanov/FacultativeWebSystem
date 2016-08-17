@@ -23,7 +23,7 @@ public class SetMarkCommand implements Command {
     	int mark = Integer.parseInt(request.getParameter(AttributeConstant.MARK));
     	String comment = request.getParameter(AttributeConstant.COMMENT);
     	int index = Integer.parseInt(request.getParameter(AttributeConstant.INDEX));
-    	
+    	    	
     	CourseMember courseMember = courseMemberService.getCourseMemberById(index);
     	courseMember.setMark(mark);
     	courseMember.setComment(comment);

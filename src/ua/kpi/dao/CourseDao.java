@@ -1,5 +1,7 @@
 package ua.kpi.dao;
 
+import java.sql.Date;
+
 import ua.kpi.model.entities.Course;
 
 /**
@@ -8,5 +10,4 @@ import ua.kpi.model.entities.Course;
  * Created by Сергей on 28.07.2016.
  */
 public interface CourseDao extends GenericDao<Course> {
-
 }

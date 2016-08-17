@@ -24,6 +24,12 @@
 		<INPUT type="hidden" name="command" value="COURSE_LIST"/>
 		<input class="button" type="submit" value="<fmt:message key="main.button.allCourses" bundle="${bundle}"/>">
 	</form>
+	<c:if test="${user.getStatus() eq 'TEACHER'}">
+		<form method="POST" action="Controller">
+			<INPUT type="hidden" name="command" value="NEW_COURSE"/>
+			<input class="button" type="submit" value="<fmt:message key="main.button.addCourse" bundle="${bundle}"/>"/>
+		</form>
+	</c:if>					    	
 	
 </body>
 </html>

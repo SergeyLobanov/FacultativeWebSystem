@@ -7,6 +7,8 @@ package ua.kpi.controller.commands;
  */
 public enum CommandList {
     LOG_IN(new LogInCommand()),
+    REGISTRATION(new RegistrationCommand()),
+    SIGN_UP(new SignUpCommand()),
     COURSE_LIST(new CourseListCommand()),
 	MY_PROFILE_STUDENT(new StudentProfileCommand()),
 	MY_PROFILE_TEACHER(new TeacherProfileCommand()),
@@ -14,7 +16,11 @@ public enum CommandList {
     JOIN_COURSE(new JoinCourseCommand()),
     ESTIMATE_STUDENT(new EstimateCommand()),
     SET_MARK(new SetMarkCommand()),
-    LOCALE(new LocalisationCommand());
+    LOCALE(new LocalisationCommand()),
+    NEW_COURSE(new NewCourseCommand()),
+    ADD_COURSE(new AddCourseCommand()),
+    EDIT_COURSE(new EditCourseCommand()),
+    SET_COURSE_INFO(new SetCourseInfoCommand());
 
     /**
      * command value

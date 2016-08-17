@@ -18,11 +18,14 @@
 		<ex:userInfo user="${user}"/><br>
 		<fmt:message key="estimate.label.student" bundle="${bundle}"/> : <c:out value="${courseMember.getStudent().getName()}"/><br>
 		
-		<fmt:message key="estimate.label.mark" bundle="${bundle}"/> <input type="number" min="0" max="5" name="mark" value="${courseMember.getMark()}"><br>
-		<fmt:message key="estimate.label.comment" bundle="${bundle}"/><input type="text" name="comment" value="${courseMember.getComment()}"><br>
+		<fmt:message key="estimate.label.mark" bundle="${bundle}"/> 
+		<input type="number" min="0" max="5" name="mark" value="${courseMember.getMark()}"><br>
+		<fmt:message key="estimate.label.comment" bundle="${bundle}"/>
+		<input type="text" name="comment" value="${courseMember.getComment()}"><br>
 		<INPUT type="hidden" name="command" value="SET_MARK"/>
 		<INPUT type="hidden" name="index" value="${courseMember.getCourseMemberID()}"/>
-		<input class="button" type="submit" value="<fmt:message key="estimate.label.save" bundle="${bundle}"/>">
+		<input class="button" type="submit" value="
+		<fmt:message key="estimate.label.save" bundle="${bundle}"/>">
 		
 		<br><br><c:out value="${message}"/><br>					    	
 	</form>
