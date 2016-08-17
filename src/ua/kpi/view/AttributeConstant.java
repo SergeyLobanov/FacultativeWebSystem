@@ -7,8 +7,10 @@ public interface AttributeConstant {
     String COMMAND = "command";
     String MESSAGE = "message";
     String USER = "user";
+	String NAME = "name";
     String LOGIN = "login";
     String PASSWORD = "password";
+	String CONFIRM_PASSWORD = "confirmPassword";
     String INDEX = "index";
     String STATUS = "status";
     String COURSE = "course";

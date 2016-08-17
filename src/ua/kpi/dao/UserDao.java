@@ -17,4 +17,11 @@ public interface UserDao extends GenericDao<User> {
      */
     User logIn(String login, String password);
 
+    /**
+     * find such login of user in database
+     * @param login login of user
+     * @return true if login is exist
+     */
+	boolean isLoginExist(String login);
+
 }

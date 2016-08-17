@@ -39,6 +39,29 @@ public class UserService {
     }
 
     /**
+     * create new user in database
+     * @param user user for creating
+     */
+	public void createUser(User user) {
+        DaoFactory factory = DaoFactory.getFactory();
+        UserDao userDao = factory.createUserDao();
+        String hashPass = getHashMD5(user.getPassword());
+        user.setPassword(hashPass);
+        userDao.create(user);		
+	}
+
+    /**
+     * verify is user with such login exist
+     * @param login login to verification
+     * @return true if login is occupied 
+     */
+	public boolean isLoginUnavailable(String login) {
+        DaoFactory factory = DaoFactory.getFactory();
+        UserDao userDao = factory.createUserDao();
+		return userDao.isLoginExist(login);
+	}
+
+    /**
      * function implements MD5 algorithm for string hashing
      * @param st string for hashing
      * @return hash value of string

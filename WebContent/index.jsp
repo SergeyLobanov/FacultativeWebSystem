@@ -37,6 +37,9 @@
 			<fieldset class="form_action">
 				<INPUT type="hidden" name="command" value="LOG_IN"/>
 				<input class="btn" type="submit" value="<fmt:message key="index.button.submit" bundle="${bundle}"/>">
+				<fmt:message key="index.label.or" bundle="${bundle}"/> 
+				<a href="http://localhost:8087/FacultativeWebSystem/Controller
+						?command=REGISTRATION"><fmt:message key="index.button.reg" bundle="${bundle}"/></a>
 			</fieldset>			
 		</form>
 		<div id="message">

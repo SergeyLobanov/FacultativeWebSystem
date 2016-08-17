@@ -65,4 +65,7 @@ public interface MysqlQuery {
             "FROM courses c " +
             "JOIN teachers t ON t.id_teacher = c.id_teacher " +
             "WHERE c.id_course = ?";
+	String VERIFY_LOGIN = "select * from users where login = ?";
+	String CREATE_STUDENT = "INSERT INTO students (name, login, password) VALUES (?, ?, ?);";
+	String CREATE_TEACHER = "INSERT INTO teachers (name, login, password) VALUES (?, ?, ?);";
 }

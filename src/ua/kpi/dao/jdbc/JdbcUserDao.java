@@ -21,13 +21,43 @@ import org.apache.log4j.Logger;
  */
 public class JdbcUserDao implements UserDao {
 
+
+    @Override
+    public void create(User user) {
+    	try (Connection connection = JdbcDaoFactory.getConnection()) {
+            PreparedStatement stmt;
+            User.Status status = user.getStatus();
+            switch (status) {
+                case STUDENT:
+                	stmt = connection.prepareStatement(MysqlQuery.CREATE_STUDENT);
+                    break;
+                case TEACHER:
+                	stmt = connection.prepareStatement(MysqlQuery.CREATE_TEACHER);
+                    break;
+                default:
+                    Logger logger =  Logger.getLogger(JdbcUserDao.class);
+                    logger.error(ErrorMessage.WRONG_STATUS);
+                    throw new RuntimeException();
+            }          
+            stmt.setString(1, user.getName());           
+            stmt.setString(2, user.getLogin());
+            stmt.setString(3, user.getPassword());
+            stmt.executeUpdate();
+    	} catch (SQLException e) {
+            System.err.println(e);
+            Logger logger =  Logger.getLogger(JdbcUserDao.class);
+            logger.error(ErrorMessage.USER_CREATE + e );
+            throw new RuntimeException(e);
+        }
+    }
+    
     @Override
     public User logIn(String login, String password) {
         User user = null;
         try (Connection connection = JdbcDaoFactory.getConnection()) {
             PreparedStatement stmt = connection.prepareStatement(MysqlQuery.FIND_USER);
-            stmt.setNString(1, login);
-            stmt.setNString(2, password);
+            stmt.setString(1, login);
+            stmt.setString(2, password);
 
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
@@ -59,10 +89,22 @@ public class JdbcUserDao implements UserDao {
         return user;
     }
 
-    @Override
-    public void create(User user) {
-        throw new UnsupportedOperationException();
-    }
+	@Override
+	public boolean isLoginExist(String login) {
+		try (Connection connection = JdbcDaoFactory.getConnection()) {
+            PreparedStatement stmt = connection.prepareStatement(MysqlQuery.VERIFY_LOGIN);
+            stmt.setString(1, login);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+            	return true;
+            }
+        } catch (SQLException e) {
+            Logger logger =  Logger.getLogger(JdbcUserDao.class);
+            logger.error(ErrorMessage.USER_LOGIN + e );
+            throw new RuntimeException(e);
+        }
+        return false;
+	}
 
     @Override
     public boolean update(User user) {
