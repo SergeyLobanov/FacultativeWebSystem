@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="ex" uri="/WEB-INF/userInfo.tld"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <fmt:setLocale value="${lang}" />
@@ -15,18 +16,18 @@
 
 		<table border="1" align="center">
 		<caption>
-		<fmt:message key="myProfile.label.course" bundle="${bundle}"/>: ${studentList.get(0).getCourse().getCourseName()}<br>
-		<fmt:message key="myProfile.label.start" bundle="${bundle}"/> ${studentList.get(0).getCourse().getStartDate()}
-		, <fmt:message key="myProfile.label.end" bundle="${bundle}"/> ${studentList.get(0).getCourse().getEndDate()}		
+			<ex:userInfo user="${user}"/> 
 		</caption>
-		<c:set var="course" value="${studentList.get(0).getCourse()}"/>
 		  <tr>
+		    <th><fmt:message key="allCourses.label.course" bundle="${bundle}"/></th>
+		    <th><fmt:message key="myProfile.label.student" bundle="${bundle}"/></th>
 		    <th><fmt:message key="myProfile.label.student" bundle="${bundle}"/></th>
 		    <th><fmt:message key="myProfile.label.mark" bundle="${bundle}"/></th>
 		    <th><fmt:message key="myProfile.label.comment" bundle="${bundle}"/></th>
 		  </tr>			
 				<c:forEach var="student" items="${studentList}">
 				  <tr>
+				    	<td><c:out value="${student.getCourse().getCourseName()}"/></td>
 				    	<td><c:out value="${student.getStudent().getName()}"/></td>
 					    <td><c:out value="${student.getMark()}"/></td>
 					    <td><c:out value="${student.getComment()}"/></td>
@@ -39,6 +40,14 @@
 						</td>	
 				  </tr>		
 				</c:forEach>
-		</table>					
+		</table>		
+		<!-- 
+		<caption>
+		<fmt:message key="myProfile.label.course" bundle="${bundle}"/>: ${studentList.get(0).getCourse().getCourseName()}<br>
+		<fmt:message key="myProfile.label.start" bundle="${bundle}"/> ${studentList.get(0).getCourse().getStartDate()}
+		, <fmt:message key="myProfile.label.end" bundle="${bundle}"/> ${studentList.get(0).getCourse().getEndDate()}		
+		</caption>
+		
+		 -->			
 </body>
 </html>
