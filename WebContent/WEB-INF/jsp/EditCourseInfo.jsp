@@ -11,13 +11,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><fmt:message key="courseInfo.label.title" bundle="${bundle}" /></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>	
+	<script type="text/javascript" src="js/validation.js" ></script>
 </head>
 <body>
 	
-	<form method="POST" action="Controller">	
+	<form id="add_course" method="POST" action="Controller">	
 		<fmt:message key="allCourses.label.course" bundle="${bundle}" />: <input type="text" name="course" value="${course.getCourseName()}"><br>
-		<fmt:message key="allCourses.label.start" bundle="${bundle}" />: <input type="date" name="start" value="${course.getStartDate()}"><br>
-		<fmt:message key="allCourses.label.end" bundle="${bundle}" />: <input type="date" name="end" value="${course.getEndDate()}"><br>
+		<fmt:message key="allCourses.label.start" bundle="${bundle}" />: <input type="date" name="start" value="${course.getStartDate()}" id="start"><br>
+		<fmt:message key="allCourses.label.end" bundle="${bundle}" />: <input type="date" name="end" value="${course.getEndDate()}" id="end"><br>
 		<INPUT type="hidden" name="command" value="SET_COURSE_INFO"/>
 		<INPUT type="hidden" name="courseId" value="${course.getId()}"/>
 		<input class="button" type="submit" value="<fmt:message key="estimate.label.save" bundle="${bundle}" />"/>

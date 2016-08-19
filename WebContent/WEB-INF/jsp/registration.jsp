@@ -12,19 +12,22 @@
 	<title><fmt:message key="registration.label.title" bundle="${bundle}" /></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/index_style.css">
+	<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>	
+	<script type="text/javascript" src="js/validation.js" ></script>
 </head>
 <body>
-	
-		<form  method="POST" action="Controller">
+	<!--  onsubmit="return(validate());" -->
+		<form id="registration" method="POST" action="Controller" name="registration">
 			<fieldset class="form_info">
 				<label for="name"><fmt:message key="registration.label.name" bundle="${bundle}"/>:</label>
 				<input type="text" name="name"><br><br>
 				<label for="login"><fmt:message key="registration.label.login" bundle="${bundle}"/>:</label>
 				<input type="text" name="login"><br><br>
 				<label for="password"><fmt:message key="registration.label.password" bundle="${bundle}"/>:</label>
-				<input type="password" name="password"><br><br>
+				<input type="password" name="password" id="password"><br><br>
 				<label for="confirmPassword"><fmt:message key="registration.label.confirmPass" bundle="${bundle}"/>:</label>
-				<input type="password" name="confirmPassword"><br><br>
+				<input type="password" name="confirmPassword" id="confirmPassword"><br><br>
 				<label><fmt:message key="registration.label.status" bundle="${bundle}"/>:</label>
 				<select name="status">
 					<option selected value="STUDENT"> <fmt:message key="myProfile.label.student" bundle="${bundle}"/>
