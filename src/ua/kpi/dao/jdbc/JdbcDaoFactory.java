@@ -28,7 +28,6 @@ public class JdbcDaoFactory extends DaoFactory {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
 */
-	//private Map<String, >//todo: don't create new JdbcConcretDao any time
 	
     private static final String DARA_SOURCE = "java:comp/env/jdbc/FacultativeDB";
 

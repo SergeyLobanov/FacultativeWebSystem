@@ -44,7 +44,7 @@ public class AddCourseCommand implements Command {
 			endDate = sdf.parse(end);
 		} catch (ParseException e) {
             Logger logger =  Logger.getLogger(AddCourseCommand.class);
-            logger.error(ErrorMessage.CREATE_COURSE_MEMBER + e );//todo:mes err
+            logger.error(ErrorMessage.DATE_PARSING + e );
             throw new RuntimeException(e);
 		}
         java.sql.Date startCourse = new java.sql.Date(startDate.getTime());

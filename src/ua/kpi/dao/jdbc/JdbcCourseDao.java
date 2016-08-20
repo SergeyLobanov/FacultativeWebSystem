@@ -98,7 +98,7 @@ public class JdbcCourseDao implements CourseDao {
     	int update;
     	try(Connection connection = JdbcDaoFactory.getConnection()) {
             PreparedStatement stmt = connection.prepareStatement(MysqlQuery.UPDATE_COURSE);
-            stmt.setString(1,course.getCourseName());//todo:update
+            stmt.setString(1,course.getCourseName());
             stmt.setInt(2, course.getCourseTeacher().getId());
             stmt.setDate(3, (Date) course.getStartDate());
             stmt.setDate(4, (Date) course.getEndDate());

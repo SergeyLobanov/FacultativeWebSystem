@@ -21,5 +21,6 @@ public interface ErrorMessage {
     String USER_LOGIN = "User login error ";
     String USER_CREATE = "User create error ";
 	String USER_TAG_ERROR = "UserInfo tag error ";
-	String WRONG_STATUS = "Wrong status of user at registration";
+	String WRONG_STATUS = "Wrong status of user at registration ";
+    String DATE_PARSING = "Date parsing error ";
 }

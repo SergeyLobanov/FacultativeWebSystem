@@ -92,7 +92,6 @@ public class JdbcCourseMemberDao implements CourseMemberDao {
 
     @Override
     public CourseMember find(Student student, int courseId) {
-        //todo: maybe don't need
         CourseMember courseMember = null;
         try (Connection connection = JdbcDaoFactory.getConnection()){
             PreparedStatement stmt = connection.prepareStatement(MysqlQuery.FIND_COURSE_MEMBER);
