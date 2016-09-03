@@ -20,6 +20,11 @@ public class CourseMemberService {
     private static CourseMemberService instance = new CourseMemberService();
 
     /**
+     * private constructor for singleton
+     */
+    private CourseMemberService(){}
+
+    /**
      * 
      * @return instance of Facultative service
      */

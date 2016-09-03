@@ -16,6 +16,11 @@ public class CourseService {
     private static CourseService instance = new CourseService();
 
     /**
+     * private constructor for singleton
+     */
+    private CourseService(){}
+
+    /**
      *
      * @return instance of Course service
      */

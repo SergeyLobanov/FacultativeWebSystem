@@ -18,6 +18,11 @@ public class UserService {
     private static UserService instance = new UserService();
 
     /**
+     * private constructor for singleton
+     */
+    private UserService(){}
+
+    /**
      * @return instance of User service
      */
     public static UserService getInstance() {
