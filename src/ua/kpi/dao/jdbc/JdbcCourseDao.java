@@ -5,8 +5,8 @@ import ua.kpi.dao.CourseDao;
 import ua.kpi.dao.jdbc.constants.ColumnName;
 import ua.kpi.dao.jdbc.constants.ErrorMessage;
 import ua.kpi.dao.jdbc.constants.MysqlQuery;
-import ua.kpi.model.entities.Course;
-import ua.kpi.model.entities.Teacher;
+import ua.kpi.entities.Course;
+import ua.kpi.entities.Teacher;
 
 import java.sql.*;
 import java.util.ArrayList;

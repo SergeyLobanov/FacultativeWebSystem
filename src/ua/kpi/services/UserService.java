@@ -1,8 +1,8 @@
-package ua.kpi.model;
+package ua.kpi.services;
 
 import ua.kpi.dao.DaoFactory;
 import ua.kpi.dao.UserDao;
-import ua.kpi.model.entities.User;
+import ua.kpi.entities.User;
 
 import java.security.MessageDigest;
 

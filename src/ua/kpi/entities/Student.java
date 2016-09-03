@@ -1,4 +1,4 @@
-package ua.kpi.model.entities;
+package ua.kpi.entities;
 
 /**
  * The Student class extends User abstract class and have STUDENT status of user

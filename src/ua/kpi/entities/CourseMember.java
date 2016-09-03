@@ -1,4 +1,4 @@
-package ua.kpi.model.entities;
+package ua.kpi.entities;
 
 /**
  * The CourseMember class implements facultative course member.

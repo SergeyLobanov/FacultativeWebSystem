@@ -1,9 +1,9 @@
-package ua.kpi.model;
+package ua.kpi.services;
 
 import ua.kpi.dao.CourseMemberDao;
 import ua.kpi.dao.DaoFactory;
-import ua.kpi.model.entities.CourseMember;
-import ua.kpi.model.entities.Student;
+import ua.kpi.entities.CourseMember;
+import ua.kpi.entities.Student;
 
 import java.util.List;
 

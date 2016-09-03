@@ -1,4 +1,4 @@
-package ua.kpi.model.entities;
+package ua.kpi.entities;
 
 /**
  * The User abstract class implements general user of service

@@ -1,7 +1,6 @@
 package test.ua.kpi.dao.jdbc;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import org.junit.After;
@@ -13,7 +12,6 @@ import org.junit.Test;
 import ua.kpi.dao.DaoFactory;
 import ua.kpi.dao.UserDao;
 import ua.kpi.dao.jdbc.JdbcDaoFactory;
-import ua.kpi.model.entities.User;
 
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.mock;

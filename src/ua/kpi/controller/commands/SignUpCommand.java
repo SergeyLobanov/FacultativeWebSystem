@@ -1,10 +1,10 @@
 package ua.kpi.controller.commands;
 
 import ua.kpi.dao.jdbc.constants.ErrorMessage;
-import ua.kpi.model.UserService;
-import ua.kpi.model.entities.Student;
-import ua.kpi.model.entities.Teacher;
-import ua.kpi.model.entities.User;
+import ua.kpi.services.UserService;
+import ua.kpi.entities.Student;
+import ua.kpi.entities.Teacher;
+import ua.kpi.entities.User;
 import ua.kpi.view.AttributeConstant;
 import ua.kpi.view.LinkConstant;
 import ua.kpi.view.MessageConstant;

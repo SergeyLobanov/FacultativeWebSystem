@@ -1,6 +1,6 @@
 package ua.kpi.dao;
 
-import ua.kpi.model.entities.User;
+import ua.kpi.entities.User;
 
 /**
  * Describe interface for UserDao

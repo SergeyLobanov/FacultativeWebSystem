@@ -1,8 +1,6 @@
 package ua.kpi.dao;
 
-import java.sql.Date;
-
-import ua.kpi.model.entities.Course;
+import ua.kpi.entities.Course;
 
 /**
  * Describe interface for CourseDao

@@ -1,8 +1,8 @@
 package test.ua.kpi.model.entities;
 
-import ua.kpi.model.entities.Course;
-import ua.kpi.model.entities.CourseMember;
-import ua.kpi.model.entities.Student;
+import ua.kpi.entities.Course;
+import ua.kpi.entities.CourseMember;
+import ua.kpi.entities.Student;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;

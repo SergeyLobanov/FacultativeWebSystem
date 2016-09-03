@@ -3,7 +3,7 @@ package ua.kpi.tag;
 import org.apache.log4j.Logger;
 
 import ua.kpi.dao.jdbc.constants.ErrorMessage;
-import ua.kpi.model.entities.User;
+import ua.kpi.entities.User;
 
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;

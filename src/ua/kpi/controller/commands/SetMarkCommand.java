@@ -1,7 +1,7 @@
 package ua.kpi.controller.commands;
 
-import ua.kpi.model.CourseMemberService;
-import ua.kpi.model.entities.CourseMember;
+import ua.kpi.services.CourseMemberService;
+import ua.kpi.entities.CourseMember;
 import ua.kpi.view.AttributeConstant;
 import ua.kpi.view.LinkConstant;
 import ua.kpi.view.MessageConstant;

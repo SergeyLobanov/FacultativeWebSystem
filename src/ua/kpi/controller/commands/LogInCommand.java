@@ -1,7 +1,7 @@
 package ua.kpi.controller.commands;
 
-import ua.kpi.model.UserService;
-import ua.kpi.model.entities.User;
+import ua.kpi.services.UserService;
+import ua.kpi.entities.User;
 import ua.kpi.view.AttributeConstant;
 import ua.kpi.view.LinkConstant;
 import ua.kpi.view.MessageConstant;

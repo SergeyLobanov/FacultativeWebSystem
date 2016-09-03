@@ -14,7 +14,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
             <name>user</name>
             <required>true</required>
       		<rtexprvalue>true</rtexprvalue>
-      		<type>ua.kpi.model.entities.User</type>
+      		<type>ua.kpi.entities.User</type>
         </attribute>
     </tag>
 </taglib>
